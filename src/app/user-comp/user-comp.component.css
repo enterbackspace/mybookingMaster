@@ -1,0 +1,159 @@
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 16px;
+}
+
+.product-card {
+  width: 100%;
+  max-width: 320px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.image-wrapper {
+  position: relative;
+  height: 200px;
+  background-color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-wrapper img {
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Out of stock badge */
+.stock-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: #d32f2f;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+/* Favorite button */
+.favorite-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+.favorite-btn span.filled {
+  color: red;
+}
+
+/* Typography */
+.product-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.ingredients {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.product-type {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 10px;
+  background-color: #e0e0e0;
+}
+
+.product-type.Veg {
+  background-color: #e6f4ea;
+  color: #1b5e20;
+}
+
+.product-type.Nonveg {
+  background-color: #fce8e6;
+  color: #b71c1c;
+}
+
+.price-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.mrp {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.price {
+  font-weight: bold;
+  color: #2e7d32;
+  font-size: 16px;
+}
+
+.discount {
+  color: #d32f2f;
+  font-weight: 500;
+  cursor: help;
+}
+
+/* Button area */
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: space-between;
+  padding: 0 12px 12px;
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    max-width: 90%;
+  }
+
+  .image-wrapper {
+    height: 160px;
+  }
+
+  .product-name {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 14px;
+  }
+
+  .discount {
+    font-size: 13px;
+  }
+}
+.search-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+
+.search-field {
+  width: 300px;
+}

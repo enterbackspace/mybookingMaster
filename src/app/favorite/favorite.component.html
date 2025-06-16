@@ -1,0 +1,23 @@
+
+<div *ngIf="favouriteItems.length === 0" class="empty-favourites">
+  Wow. So empty. Clearly, you have <em>excellent</em> taste in doing nothing.
+  <br />
+  <button class="sarcastic-button" (click)="clicktoproduct()">
+    <span>🛒</span>Fine, I'll go shopping 🙄
+  </button>
+</div>
+
+
+<div class="favourites-container" *ngIf="favouriteItems.length > 0">
+  <div *ngFor="let item of favouriteItems" class="favourite-card">
+    <img [src]="item.image" alt="{{ item.productName }}" class="product-image">
+    <div class="details">
+      <h3>{{ item.productName }}</h3>
+      <p>Price: ₹{{ item.price }}</p>
+      <p>MRP: <s>₹{{ item.mrp }}</s></p>
+
+      <button (click)="moveToCart(item)">🛒 Move to Cart</button>
+      <button (click)="removeFromFavourite(item.id)">❌ Remove</button>
+    </div>
+  </div>
+</div>

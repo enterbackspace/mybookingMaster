@@ -1,0 +1,57 @@
+
+<mat-card>
+    <div class="d-flex justify-content-center mt-5 " >
+        <img src="assets/icon.png" width="150px">
+    </div>
+<div class="d-flex justify-content-center">
+    <h1 style="font-family: 'Montserrat',sans-serif;" [style.color]="'white'">User Registeration</h1>
+
+
+</div>
+        <mat-card-content class="mt-3">
+  
+    <form [formGroup]="registerForm" >
+        <mat-form-field  appearance="outline">
+            <mat-label>username</mat-label>
+            <input matInput formControlName="username">
+            <mat-error *ngIf="['userExistError']">Given username already exist
+        </mat-error>
+        </mat-form-field> 
+       
+        <mat-form-field appearance="outline">
+            <mat-label>email</mat-label>
+            <input matInput formControlName="email">
+            <mat-error *ngIf="['emailExistError']">Given email already exist</mat-error>
+        </mat-form-field> 
+        
+     <mat-form-field appearance="outline">
+    <mat-label>password</mat-label>
+    <input matInput formControlName="password">
+    <mat-error *ngIf="['pattern']">Must contain at least one number and one uppercase and lowercase letter</mat-error>
+    </mat-form-field> 
+        
+                 
+                     
+        
+                <mat-radio-group formControlName="gender"  >
+                    <mat-label><b>Gender</b></mat-label>
+                    <mat-radio-button value="male">male</mat-radio-button>
+                    <mat-radio-button value="female">female</mat-radio-button>
+                    <mat-error *ngIf="registerForm.controls['gender'].touched && registerForm.controls['gender'].invalid">please select gender</mat-error>
+
+                </mat-radio-group>
+          
+         
+       
+       
+ 
+
+    <a mat-raised-button  class="w-50 mb-4" (click)="proceedRegistration()">submit</a>
+    <a routerLink="/master"  mat-flat-button >Register for Admin</a>
+
+</form>
+<br>
+    </mat-card-content>
+
+   
+ </mat-card> 

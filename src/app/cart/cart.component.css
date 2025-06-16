@@ -1,0 +1,190 @@
+.cart-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+.cart-wrapper .cart-left,
+.cart-wrapper .cart-right {
+  flex: 1;
+}
+.cart-wrapper .cart-left {
+  max-width: 65%;
+}
+.cart-wrapper .cart-right {
+  max-width: 30%;
+}
+.cart-wrapper .cart-item {
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+.cart-wrapper .cart-item:hover {
+  transform: scale(1.01);
+}
+.cart-wrapper .cart-item .item-content {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+.cart-wrapper .cart-item .item-content .item-image img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.cart-wrapper .cart-item .item-content .item-details {
+  flex: 1;
+}
+.cart-wrapper .cart-item .item-content .item-details .item-name {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.cart-wrapper .cart-item .item-content .item-details .seller {
+  font-size: 0.9rem;
+  color: #666;
+}
+.cart-wrapper .cart-item .item-content .item-details .price {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+.cart-wrapper .cart-item .item-content .item-details .price .original-price {
+  text-decoration: line-through;
+  margin-left: 0.5rem;
+  color: #999;
+  font-size: 0.9rem;
+}
+.cart-wrapper .cart-item .item-content .item-details .price .discount {
+  color: green;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+}
+.cart-wrapper .cart-item .item-content .item-details .quantity-controls {
+  margin-top: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.cart-wrapper .cart-item .item-content .item-details .quantity-controls .qty {
+  min-width: 24px;
+  text-align: center;
+}
+.cart-wrapper .cart-item .item-content .item-details .actions {
+  margin-top: 1rem;
+}
+.cart-wrapper .cart-item .item-content .item-details .actions button {
+  font-size: 0.85rem;
+}
+.cart-wrapper .price-summary {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: white;
+}
+.cart-wrapper .price-summary h4 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+.cart-wrapper .price-summary .price-line {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+.cart-wrapper .price-summary .price-line.total {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.cart-wrapper .price-summary .price-line .discount {
+  color: green;
+}
+.cart-wrapper .price-summary .price-line .text-green {
+  color: green;
+  font-weight: 500;
+}
+.cart-wrapper .price-summary .savings {
+  margin-top: 1rem;
+  color: green;
+  font-size: 0.9rem;
+}
+.cart-wrapper .price-summary .place-order {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+.empty-cart-container {
+  text-align: center;
+  padding: 3rem;
+  background: #fff8f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+.empty-cart-container .mom-dialogue,
+.empty-cart-container .kid-dialogue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  gap: 1rem;
+}
+.empty-cart-container .mom-dialogue .speech-bubble,
+.empty-cart-container .kid-dialogue .speech-bubble {
+  background-color: #fef0ef;
+  border: 2px solid #ffc0cb;
+  padding: 1rem;
+  border-radius: 20px;
+  max-width: 300px;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+}
+.empty-cart-container .mom-dialogue img,
+.empty-cart-container .kid-dialogue img {
+  max-width: 120px;
+  height: auto;
+}
+.empty-cart-container .go-button {
+  margin-top: 2rem;
+}
+.empty-cart-container .go-button .go-to-market-button {
+  background-color: #ff4081;
+  border: none;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.empty-cart-container .go-button .go-to-market-button:hover {
+  background-color: #e73370;
+}
+.empty-cart-container .delivery-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0;
+  font-size: 0.95rem;
+  border-top: 1px solid #eee;
+}
+.empty-cart-container .delivery-row .label {
+  color: #555;
+  font-weight: 500;
+}
+.empty-cart-container .delivery-row .date {
+  font-weight: 600;
+  color: #388e3c;
+}
+@media (max-width: 600px) {
+  .empty-cart-container .delivery-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  .empty-cart-container .delivery-row .date {
+    align-self: flex-end;
+  }
+}

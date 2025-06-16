@@ -1,0 +1,65 @@
+<div class="checkout-wrapper">
+
+  <!-- RIGHT CARD: Price Details (moved before left content in HTML) -->
+  <div class="checkout-card right-card">
+    <section class="section">
+      <h3>Price Details</h3>
+      <p>Item(s) total: ₹{{ itemTotal }}</p>
+      <p>Delivery Charges: <span class="text-green">Free</span></p>
+      <p>Platform Fee: ₹{{ platformFee }}</p>
+      <hr />
+      <p><strong>Total Payable: ₹{{ totalPayable }}</strong></p>
+    </section>
+  </div>
+
+  <!-- LEFT CARD: User, Address, Order Summary, Place Order -->
+  <div class="checkout-card left-card">
+    <h2>Checkout</h2>
+
+    <!-- Login Info -->
+    <section class="section">
+      <h3>Login</h3>
+      <p>{{ userName }} | {{ phone }}</p>
+    </section>
+
+    <!-- Delivery Address -->
+    <section class="section">
+      <h3>Delivery Address</h3>
+      <p>
+        {{ address.street }}, {{ address.city }} 
+        {{ address.state }} - {{ address.pincode }} 
+        {{ address.country }}
+      </p>
+    </section>
+<!-- Order Summary -->
+<section class="section">
+  <h3>Order Summary</h3>
+  <div *ngFor="let item of cartItems" class="item-summary">
+
+    <!-- Image -->
+    <div class="summary-image">
+      <img [src]="item.image" alt="{{ item.productName }}" />
+    </div>
+
+    <!-- Product Info -->
+    <div class="summary-details">
+      <p><strong>{{ item.productName }}</strong></p>
+      <p>Price: ₹{{ item.price }}</p>
+      <p>Quantity: {{ item.quantity || 1 }}</p>
+      <p>Delivery: Free | Seller: {{ item.seller || 'Default Seller' }}</p>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- Contact Info and Button -->
+    <section class="section contact-section">
+      <p class="contact-text">
+        Your order confirmation will be sent to <strong>{{ email }}</strong>
+      </p>
+     <button class="place-order-button" (click)="submitOrder()">Confirm Order</button>  
+    </section>
+  </div>
+
+</div>

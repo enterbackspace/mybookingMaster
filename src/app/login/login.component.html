@@ -1,0 +1,44 @@
+ <div class="vh-100" style="background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ibef.org%2Fblogs%2Findia-s-fruits-and-vegetables-industry&psig=AOvVaw10VlTSM54P-qNx7Sqzaq36&ust=1747718982682000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIj82tvmro0DFQAAAAAdAAAAABAK') no-repeat center center fixed; background-size: cover;">
+    <!-- ...existing code... -->
+    <mat-card class="dd">
+    <div class=" d-flex   justify-content-center mt-5">
+      <img src="assets/icon.png" width="100px">
+
+    </div>
+    <div class=" d-flex justify-content-center">
+        <h2 [style.color]="'White'"><b>Login</b> </h2>
+        
+    </div>
+    <mat-card-content class="d-flex  flex-wrap justify-content-center" >
+        <form [formGroup]="loginForm"  >
+            <mat-form-field appearance="outline" class="transparent-input">
+  <mat-label>username</mat-label>
+  <input matInput formControlName="username">
+  <mat-error *ngIf="loginForm.invalid">enter Username</mat-error>
+</mat-form-field>
+
+<mat-form-field appearance="outline" class="transparent-input">
+  <mat-label>password</mat-label>
+  <input matInput type="password" formControlName="password">
+  <mat-error *ngIf="loginForm.invalid">please enter a correct password</mat-error>
+</mat-form-field>
+<!-- ...existing code... -->
+<div class="d-flex flex-column align-items-center mt-4 gap-2">
+  <button mat-raised-button color="primary" class="w-100 mb-2" (click)="log()">
+    <mat-icon class="me-1">lock</mat-icon> Submit
+  </button>
+  <button mat-raised-button color="accent" class="w-100 mb-2" routerLink="/reg">
+    Register
+  </button>
+  <button mat-flat-button color="warn" class="w-100" [disabled]="loginForm.valid" routerLink="/password">
+    <mat-icon class="me-1">error_outline</mat-icon> Forgot Password
+  </button>
+</div>
+<!-- ...existing code... -->
+
+        </form>
+
+    </mat-card-content>
+ </mat-card>  
+
+ 

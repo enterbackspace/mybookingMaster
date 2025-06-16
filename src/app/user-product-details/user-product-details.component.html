@@ -1,0 +1,58 @@
+
+ <mat-card *ngIf="product" class="product-details-card">
+  <div class="details-wrapper">
+    <img mat-card-image [src]="product.imageUrl" alt="{{ product.ProductName }}" />
+
+    <div class="details-content">
+      <h1>{{ product.ProductName }}</h1>
+      <p><strong>Category:</strong> {{ product.category }}</p>
+      <p><strong>Description:</strong> {{ product.description }}</p>
+      <p><strong>Ingredients:</strong> {{ product.Ingerdiance }}</p>
+      <p><strong>Type:</strong> {{ product.type | titlecase }}</p>
+      <p><strong>Unit:</strong> {{ product.unit }}</p>
+      <p><strong>Rating:</strong> ⭐ {{ product.rating }}</p>
+
+<!-- <div class="price-section">
+  <p><strong>MRP:</strong> ₹{{ product.mrp }}</p>
+  <p><strong>Price:</strong> ₹{{ product.mrp - (product.mrp * product.discount / 100) | number:'1.2-2' }}</p>
+  <p class="discount">
+    You Save: ₹{{ product.mrp * product.discount / 100 | number:'1.2-2' }} ({{ product.discount }}%)
+  </p>
+</div> -->
+
+
+   <!-- Pricing -->
+<div class="price-section">
+  <!-- <span class="mrp"><b>MRP:</b> ₹{{ product.mrp }}</span> -->
+  <p><strong>MRP:</strong> ₹{{ product.mrp }}</p>
+
+  <span><strong>Price:</strong>
+  ₹{{ (product.mrp - (product.mrp * (product.discount.replace('%', '') / 100))) | number:'1.2-2' }}
+</span><br>
+
+  <span class="discount">
+    You Save:
+    ₹{{ (product.mrp * product.discount / 100) | number:'1.2-2' }}
+    ({{ product.discount }}%)
+  </span>
+</div>
+
+
+      <div class="tags">
+        <span *ngFor="let tag of product.tags" class="tag">{{ tag }}</span>
+      </div>
+
+      <div class="actions">
+        <button mat-raised-button color="primary" [disabled]="product.stock <= 0">Buy Now</button>
+        <button mat-raised-button color="accent" [disabled]="product.stock <= 0" (click)="addToCart(product)">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</mat-card>
+
+<!-- Optional: Loading or Not Found -->
+<div *ngIf="!product">
+  <p>Loading product details or product not found...</p>
+</div>

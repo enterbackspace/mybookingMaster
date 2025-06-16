@@ -1,0 +1,37 @@
+<div class="mt-4 d-flex justify-content-center">
+  <mat-card class="p-4 shadow rounded" style="max-width: 960px; width: 100%;">
+    <div class="row g-4 align-items-center">
+      
+      <!-- Product Image -->
+      <div class="col-md-5 text-center">
+        <img [src]="info.imageUrl" alt="Product Image" width="100%" height="auto" style="max-width: 280px; border-radius: 12px;">
+      </div>
+
+      <!-- Product Info -->
+      <div class="col-md-4">
+        <h5 class="text-muted mb-1">Fresho</h5>
+        <h6 class="text-dark"><strong>Product ID:</strong> {{info.productId}}</h6>
+        <h4 class="fw-bold">{{info.ProductName}}</h4>
+        <p><strong>MRP:</strong> <s class="text-danger">{{info.mrp | currency:'INR'}}</s></p>
+        <p class="mb-1"><strong>Price:</strong></p>
+        <h4 class="text-success fw-bold">{{info.price | currency:'INR'}}</h4>
+        <p class="text-danger"><strong>You Save:</strong> {{info.discount}}%</p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="col-md-3 d-flex flex-column gap-2">
+        <button mat-flat-button color="warn" class="text-white" (click)="edit(info.id)" matTooltip="Edit Details">
+          <mat-icon>edit</mat-icon> &nbsp;Edit
+        </button>
+
+        <button mat-flat-button color="accent" class="bg-danger text-white" (click)="delete(info.id)" matTooltip="Delete Product">
+          <mat-icon>delete</mat-icon> &nbsp;Delete
+        </button>
+
+        <button mat-flat-button class="text-white" style="background-color: rgb(220, 87, 220);" routerLink="/dash/product" matTooltip="Back To Product">
+          <mat-icon>fast_rewind</mat-icon> &nbsp;Back
+        </button>
+      </div>
+    </div>
+  </mat-card>
+</div>

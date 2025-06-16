@@ -1,0 +1,189 @@
+/* Container for the entire section */
+.back {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+/* Add Product Button */
+.add-product-btn {
+  background-color: #b9ed69 !important;
+  color: #fff !important;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  font-weight: 500;
+}
+
+.add-product-btn:hover {
+  background-color: #a3d55f !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Search Field */
+.search-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.search-field {
+  width: 100%;
+}
+
+.search-field .mat-form-field-outline {
+  border-color: #b9ed69 !important;
+}
+
+.search-field input {
+  font-size: 16px;
+}
+
+/* Store Icon */
+.store-icon {
+  transition: transform 0.3s ease;
+}
+
+.store-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Product Cards Container */
+.products-container {
+  padding: 20px;
+}
+
+/* Product Card Wrapper */
+.product-card-wrapper {
+  flex: 1 1 300px;
+  max-width: 320px;
+  margin: 15px;
+}
+
+/* Product Card */
+.product-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Header */
+.card-header {
+  background: linear-gradient(135deg, #b9ed69 0%, #8bc34a 100%);
+  color: #fff !important;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Card Content */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  position: relative;
+}
+
+.food-type {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+.food-icon {
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 100%;
+  max-width: 200px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+}
+
+/* Price */
+.price {
+  padding: 0 15px 15px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.text-success {
+  font-weight: 600;
+}
+
+/* Card Actions */
+.card-actions {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+.details-btn {
+  background-color: #b9ed69 !important;
+  color: #fff !important;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.details-btn:hover {
+  background-color: #a3d55f !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-card-wrapper {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+.food-dot {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid transparent;
+  margin-right: 5px;
+}
+
+.veg-dot {
+  background-color: #4CAF50; /* green */
+  border-color: #388E3C;
+}
+
+.nonveg-dot {
+  background-color: #E53935; /* red */
+  border-color: #B71C1C;
+}

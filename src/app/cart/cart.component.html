@@ -1,0 +1,82 @@
+<div class="cart-wrapper" *ngIf="cartItems.length > 0; else emptyCart">
+  <!-- Left Section -->
+  <div class="cart-left">
+    <mat-card class="cart-item" *ngFor="let item of cartItems">
+      <div class="item-content">
+        <!-- Image -->
+        <div class="item-image">
+          <img [src]="item.image" alt="{{ item.productName }}" />
+        </div>
+
+       <div class="item-details">
+  <h3 class="item-name">{{ item.productName }}</h3>
+  <p class="seller">Sold by: {{ item.seller || 'Retailer' }}</p>
+  <p class="price">
+    ₹{{ item.price }}
+    <span class="original-price">₹{{ item.mrp }}</span>
+    <span class="discount">
+      ({{ ((item.mrp - item.price) / item.mrp * 100) | number:'1.0-0' }}% OFF)
+    </span>
+  </p>
+
+  <!-- Expected Delivery -->
+  <div class="delivery-row">
+    <span class="left-label">Expected Delivery : </span>
+    <b class="right-date" style="color: green;">{{ deliveryDate | date: 'MMM d, y' }}</b>
+  </div>
+
+  <div class="quantity-controls">
+    <button mat-icon-button (click)="decreaseQty(item)" [disabled]="item.quantity <= 1">
+      <mat-icon>remove</mat-icon>
+    </button>
+    <span class="qty">{{ item.quantity }}</span>
+    <button mat-icon-button (click)="increaseQty(item)">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+
+  <div class="actions">
+    <button mat-button color="warn" (click)="removeItem(item.id)">Remove</button>
+  </div>
+</div>
+</div>
+</mat-card>
+</div>
+
+
+  <!-- Right Section -->
+  <div class="cart-right">
+    <mat-card class="price-summary">
+      <h4>Price Details</h4>
+      <div class="price-line">Price ({{ cartItems.length }} items): <span>₹{{ totalMRP }}</span></div>
+      <div class="price-line">Discount: <span class="discount">-₹{{ totalDiscount }}</span></div>
+      <div class="price-line">Delivery Charges: <span class="text-green">Free</span></div>
+      <div class="price-line">Protect Promise Fee: <span>₹19</span></div>
+      <hr />
+      <div class="price-line total">Total Amount: <span>₹{{ grandTotal + 19 }}</span></div>
+      <p class="savings">You will save ₹{{ totalDiscount }} on this order</p>
+      <button mat-raised-button color="primary" class="place-order" (click)="checkout()">Place Order</button>
+    </mat-card>
+  </div>
+</div>
+
+<!-- Empty Cart Template -->
+<ng-template #emptyCart>
+  <div class="empty-cart-container">
+    <div class="mom-dialogue">
+      <img src="assets/empty_cart.jpeg" alt="Mom Scolding" />
+      <div class="speech-bubble mom">Cart is empty? Why are you wasting time?<br>Go and buy some vegetables!<br>What are you going to eat tonight?! 😤🛒</div>
+    </div>
+
+    <div class="kid-dialogue">
+      <div class="speech-bubble kid">Arrey mummy... wait! I’ll get it for you!<br>Seriously, now! 😅</div>
+      <img src="assets/kid.png" alt="Kid Going to Market" />
+    </div>
+
+    <div class="go-button">
+      <button class="go-to-market-button" (click)="goToMarket()">
+        🛒 Bye mom, I'm going to the market!
+      </button>
+    </div>
+  </div>
+</ng-template>

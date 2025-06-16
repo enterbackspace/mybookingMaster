@@ -1,0 +1,147 @@
+.checkout-wrapper {
+  max-width: 1000px;
+  margin: 40px auto;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Card Base */
+.checkout-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+/* Left Card (Main Info) */
+.left-card {
+  flex: 2;
+  min-width: 600px;
+}
+
+/* Right Card (Price Summary) */
+.right-card {
+  flex: 1;
+  min-width: 280px;
+  height: fit-content;
+}
+
+/* Headings & Sections */
+.checkout-card h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.section {
+  margin-bottom: 24px;
+}
+
+.section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #444;
+}
+
+.item-summary {
+  padding: 12px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.text-green {
+  color: green;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .checkout-wrapper {
+    flex-direction: column;
+  }
+
+  .left-card,
+  .right-card {
+    min-width: 100%;
+  }
+}
+
+
+.contact-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem; /* optional spacing between text and button */
+}
+
+.contact-text {
+  flex: 1; /* takes remaining space */
+}
+
+.place-order-button {
+  width: 25%;
+  min-width: 120px; /* optional: prevents button from being too small */
+}
+.item-summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+
+.summary-image img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.summary-details {
+  flex: 1;
+}
+.checkout-wrapper {
+  display: flex;
+  flex-direction: row-reverse; /* Makes right card appear on right, but placed first */
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.checkout-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.left-card {
+  flex: 2;
+}
+
+.right-card {
+  flex: 1;
+}

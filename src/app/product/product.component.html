@@ -1,0 +1,39 @@
+<div class="back">
+   
+  <div class="search-container mt-4">
+    <mat-form-field appearance="outline" class="search-field">
+      <mat-label>Search Products</mat-label>
+      <input matInput type="text" [(ngModel)]="Search" placeholder="Search by product name">
+    </mat-form-field>
+  </div>
+  <div class="d-flex justify-content-center">
+    <!-- <img src="assets/icon.png" width="200px" alt="Store Icon" class="store-icon"> -->
+  </div>
+</div>
+
+<div class="products-container d-flex flex-wrap justify-content-around">
+  <div *ngFor="let food of products | search:Search" class="product-card-wrapper">
+    <mat-card class="product-card">
+      <mat-card-header class="card-header">
+        <h3 class="product-title">{{food.ProductName | uppercase}}</h3>
+      </mat-card-header>
+
+      <mat-card-content class="card-content">
+
+     <div class="food-type">
+  <span 
+    class="food-dot" 
+    [ngClass]="{'veg-dot': food.type === 'veg', 'nonveg-dot': food.type === 'non-veg'}"
+    [attr.aria-label]="food.type === 'veg' ? 'Vegetarian' : 'Non-Vegetarian'"
+    [attr.title]="food.type === 'veg' ? 'Vegetarian' : 'Non-Vegetarian'">
+  </span>
+</div>
+        <!-- <img [src]="food.imageUrl || 'assets/placeholder.png'" alt="{{food.ProductName}}" class="product-image"> -->
+      </mat-card-content>
+      <h3 class="price"><b>Price:</b> <span class="text-success">{{food.price | currency:'INR'}}</span></h3>
+      <mat-card-actions class="card-actions">
+        <button mat-flat-button class="details-btn" [routerLink]="['/dash/pd',food]">View Details</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
