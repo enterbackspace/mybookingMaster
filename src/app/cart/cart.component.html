@@ -1,62 +1,61 @@
 <div class="cart-wrapper" *ngIf="cartItems.length > 0; else emptyCart">
-  <!-- Left Section -->
-  <div class="cart-left">
-    <mat-card class="cart-item" *ngFor="let item of cartItems">
-      <div class="item-content">
-       <mat-checkbox  [(ngModel)]="item.selected"  class="cart-checkbox"></mat-checkbox>
-        <!-- Image -->
-        <div class="item-image">
-          <img [src]="item.image" alt="{{ item.productName }}" />
+  <!-- New Decorative Wrapper with Background -->
+  <div class="decorative-wrapper">
+    <!-- Right Section: Price Details on Top Right -->
+    <div class="cart-right">
+      <mat-card class="price-summary">
+        <h4>Price Details</h4>
+        <div class="price-line">Price ({{ cartItems.length }} items): <span>₹{{ totalMRP }}</span></div>
+        <div class="price-line">Discount: <span class="discount">-₹{{ totalDiscount }}</span></div>
+        <div class="price-line">Delivery Charges: <span class="text-green">Free</span></div>
+        <div class="price-line">Protect Promise Fee: <span>₹19</span></div>
+        <hr />
+        <div class="price-line total">Total Amount: <span>₹{{ grandTotal + 19 }}</span></div>
+        <p class="savings">You will save ₹{{ totalDiscount }} on this order</p>
+        <button mat-raised-button color="primary" class="place-order" (click)="placeSelectedOrder()">Place Order</button>
+      </mat-card>
+    </div>
+
+    <!-- Left Section -->
+    <div class="cart-left">
+      <mat-card class="cart-item" *ngFor="let item of cartItems">
+        <div class="item-content fancy-item">
+          <mat-checkbox [(ngModel)]="item.selected" class="cart-checkbox"></mat-checkbox>
+
+          <div class="item-image fancy-image">
+            <img [src]="item.image" alt="{{ item.productName }}" />
+          </div>
+
+          <div class="item-details fancy-details">
+            <h3 class="product-title">{{ item.productName }}</h3>
+            <div class="price-block">
+              <span class="discounted">₹{{ item.price }}</span>
+              <span class="original">₹{{ item.mrp }}</span>
+              <span class="badge">{{ ((item.mrp - item.price) / item.mrp * 100) | number:'1.0-0' }}% OFF</span>
+            </div>
+            <p class="seller-info">Sold by: <strong>{{ item.seller || 'Retailer' }}</strong></p>
+
+            <div class="delivery-info">
+              Delivery by: <b>{{ deliveryDate | date: 'MMM d, y' }}</b>
+            </div>
+
+            <div class="qty-controls">
+              <button mat-icon-button (click)="decreaseQty(item)" [disabled]="item.quantity <= 1">
+                <mat-icon>remove</mat-icon>
+              </button>
+              <span class="qty-display">{{ item.quantity }}</span>
+              <button mat-icon-button (click)="increaseQty(item)">
+                <mat-icon>add</mat-icon>
+              </button>
+            </div>
+
+            <div class="remove-btn">
+              <button mat-button color="warn" (click)="removeItem(item.id)">Remove</button>
+            </div>
+          </div>
         </div>
-       <div class="item-details">
-  <h3 class="item-name">{{ item.productName }}</h3>
-  <p class="seller">Sold by: {{ item.seller || 'Retailer' }}</p>
-  <p class="price">
-    ₹{{ item.price }}
-    <span class="original-price">₹{{ item.mrp }}</span>
-    <span class="discount">
-      ({{ ((item.mrp - item.price) / item.mrp * 100) | number:'1.0-0' }}% OFF)
-    </span>
-  </p>
-
-  <!-- Expected Delivery -->
-  <div class="delivery-row">
-    <span class="left-label">Expected Delivery : </span>
-    <b class="right-date" style="color: green;">{{ deliveryDate | date: 'MMM d, y' }}</b>
-  </div>
-
-  <div class="quantity-controls">
-    <button mat-icon-button (click)="decreaseQty(item)" [disabled]="item.quantity <= 1">
-      <mat-icon>remove</mat-icon>
-    </button>
-    <span class="qty">{{ item.quantity }}</span>
-    <button mat-icon-button (click)="increaseQty(item)">
-      <mat-icon>add</mat-icon>
-    </button>
-  </div>
-
-  <div class="actions">
-    <button mat-button color="warn" (click)="removeItem(item.id)">Remove</button>
-  </div>
-</div>
-</div>
-</mat-card>
-</div>
-
-
-  <!-- Right Section -->
-  <div class="cart-right">
-    <mat-card class="price-summary">
-      <h4>Price Details</h4>
-      <div class="price-line">Price ({{ cartItems.length }} items): <span>₹{{ totalMRP }}</span></div>
-      <div class="price-line">Discount: <span class="discount">-₹{{ totalDiscount }}</span></div>
-      <div class="price-line">Delivery Charges: <span class="text-green">Free</span></div>
-      <div class="price-line">Protect Promise Fee: <span>₹19</span></div>
-      <hr />
-      <div class="price-line total">Total Amount: <span>₹{{ grandTotal + 19 }}</span></div>
-      <p class="savings">You will save ₹{{ totalDiscount }} on this order</p>
-      <button mat-raised-button color="primary" class="place-order" (click)="placeSelectedOrder()">Place Order</button>
-    </mat-card>
+      </mat-card>
+    </div>
   </div>
 </div>
 
@@ -64,13 +63,20 @@
 <ng-template #emptyCart>
   <div class="empty-cart-container">
     <div class="mom-dialogue">
-      <img src="assets/empty_cart.jpeg" alt="Mom Scolding" />
-      <div class="speech-bubble mom">Cart is empty? Why are you wasting time?<br>Go and buy some vegetables!<br>What are you going to eat tonight?! 😤🛒</div>
+      <img src="assets/empty_cart.jpeg" alt="Mom Scolding"  style="width: 100px; height: 100px;" />
+      <div class="speech-bubble mom">
+        Cart is empty? Why are you wasting time?<br>
+        Go and buy some vegetables!<br>
+        What are you going to eat tonight?! 😠🛒
+      </div>
     </div>
 
     <div class="kid-dialogue">
-      <div class="speech-bubble kid">Arrey mummy... wait! I’ll get it for you!<br>Seriously, now! 😅</div>
-      <img src="assets/kid.png" alt="Kid Going to Market" />
+      <div class="speech-bubble kid">
+        Arrey mummy... wait! I’ll get it for you!<br>
+        Seriously, now! 😅
+      </div>
+      <img src="assets/kid.png" alt="Kid Going to Market" style="width: 100px; height: 100px;" />
     </div>
 
     <div class="go-button">

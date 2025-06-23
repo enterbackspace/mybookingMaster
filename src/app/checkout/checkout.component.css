@@ -1,80 +1,157 @@
 .checkout-wrapper {
-  max-width: 1000px;
+  max-width:  1500px;
   margin: 40px auto;
   display: flex;
-  gap: 30px;
+  flex-direction: row-reverse; /* Right card appears on right */
+  gap: 2rem;
   flex-wrap: wrap;
-  font-family: 'Segoe UI', sans-serif;
+  align-items: flex-start;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Card Base */
+/* Card Base Style */
 .checkout-card {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  background-color: #f5fff5;
+  border: 2px solid #c0eac0;
+  border-radius: 16px;
   padding: 24px;
-  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 128, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
-/* Left Card (Main Info) */
+.checkout-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 128, 0, 0.15);
+}
+
+/* Layout of cards */
 .left-card {
   flex: 2;
   min-width: 600px;
 }
 
-/* Right Card (Price Summary) */
 .right-card {
   flex: 1;
   min-width: 280px;
   height: fit-content;
 }
 
-/* Headings & Sections */
-.checkout-card h2 {
-  font-size: 26px;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 10px;
-}
-
+/* Section inside cards */
 .section {
-  margin-bottom: 24px;
+  background-color: #f9fff9;
+  border: 2px solid #cce8cc;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 20px;
 }
 
 .section h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 1.4rem;
   font-weight: 600;
-  color: #444;
+  color: #2e7d32;
+  margin-bottom: 20px;
 }
 
-.item-summary {
-  padding: 12px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  margin-bottom: 10px;
+.checkout-card .section p {
+  font-size: 1rem;
+  margin: 6px 0;
+  display: flex;
+  justify-content: space-between;
+  color: #333;
 }
 
-button {
-  width: 100%;
-  padding: 14px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background 0.3s;
+.checkout-card .section p span:first-child {
+  color: #5e5e5e;
 }
 
-button:hover {
-  background-color: #0056b3;
+.checkout-card .section hr {
+  margin: 16px 0;
+  border: 0;
+  border-top: 1px dashed #b5ddb5;
 }
 
 .text-green {
-  color: green;
+  color: #388e3c;
+  font-weight: 500;
+}
+
+/* Total Payable Highlight */
+.total-payable {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1b5e20;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+  border-top: 2px solid #a5d6a7;
+  padding-top: 10px;
+}
+
+/* Order Summary Items */
+.item-summary {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #d7e5d7;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 4px rgba(0, 100, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.item-summary:hover {
+  box-shadow: 0 4px 12px rgba(0, 128, 0, 0.12);
+}
+
+.summary-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-right: 16px;
+  border: 2px solid #e0f2e0;
+}
+
+.summary-details {
+  flex: 1;
+}
+
+.summary-details p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.summary-details p strong {
+  font-size: 1.05rem;
+  color: #2e7d32;
+}
+
+/* Footer - Confirm Order */
+.confirmation-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #d1e7dd;
+  font-size: 0.95rem;
+}
+
+.confirm-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.confirm-btn:hover {
+  background-color: #0056b3;
 }
 
 /* Responsive */
@@ -87,61 +164,4 @@ button:hover {
   .right-card {
     min-width: 100%;
   }
-}
-
-
-.contact-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem; /* optional spacing between text and button */
-}
-
-.contact-text {
-  flex: 1; /* takes remaining space */
-}
-
-.place-order-button {
-  width: 25%;
-  min-width: 120px; /* optional: prevents button from being too small */
-}
-.item-summary {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 1rem;
-}
-
-.summary-image img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.summary-details {
-  flex: 1;
-}
-.checkout-wrapper {
-  display: flex;
-  flex-direction: row-reverse; /* Makes right card appear on right, but placed first */
-  gap: 2rem;
-  align-items: flex-start;
-}
-
-.checkout-card {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.left-card {
-  flex: 2;
-}
-
-.right-card {
-  flex: 1;
 }

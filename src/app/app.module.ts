@@ -49,6 +49,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { OrderComponent } from './order/order.component';
  // import { OrderComponent } from './orders/orders.component'; // Removed to avoid duplicate identifier error
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MAT_SELECT_CONFIG } from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -103,8 +104,14 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatDividerModule,
     MatExpansionModule,
     MatCheckboxModule
+     
   ],
-  providers: [],
+  providers: [  {
+      provide: MAT_SELECT_CONFIG,
+      useValue: {
+        overlayPanelClass: 'force-panel-down'
+      }
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

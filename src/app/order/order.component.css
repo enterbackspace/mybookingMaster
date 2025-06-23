@@ -1,122 +1,38 @@
-.order-page {
+.cart-item {
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  padding: 12px;
-  background-color: #f4f4f4;
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 14px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
 }
 
-.checkout-left, .checkout-right {
+.product-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 15px;
+  border-radius: 8px;
+}
+
+.item-details {
   display: flex;
   flex-direction: column;
-  gap: 12px;
 }
 
-.checkout-left {
-  flex: 2;
-  min-width: 500px;
-}
-
-.checkout-right {
-  flex: 1;
-  min-width: 280px;
-}
-
-.section {
-  padding: 12px 16px;
-  background-color: #fff;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.user-info p {
-  margin: 2px 0;
-}
-
-.order-item {
-  margin-bottom: 8px;
-}
-
-.item-details p {
-  margin: 1px 0;
-  font-size: 13px;
-  color: #333;
-}
-
-.item-name {
-  font-weight: 600;
-  font-size: 14px;
-  color: #222;
-}
-
-.price-summary {
-  padding: 12px 16px;
-}
-
-.price-line {
-  display: flex;
-  justify-content: space-between;
-  margin: 4px 0;
-  font-size: 13px;
-}
-
-.price-line.total {
+.product-name {
   font-weight: bold;
+}
+
+.product-info,
+.product-total {
   font-size: 14px;
-  color: #2c3e50;
-}
-
-.text-green {
-  color: #388e3c;
-  font-weight: 500;
-}
-
-.cashback-info {
-  padding: 10px 14px;
-  background-color: #e8f5e9;
-  border-left: 4px solid #4caf50;
-  font-size: 13px;
-}
-
-.confirm-btn {
-  margin-top: 16px;
-  align-self: flex-end;
-  padding: 6px 16px;
-  font-size: 13px;
-}
-
-mat-card h2,
-mat-card h3 {
-  margin: 0 0 8px;
-  font-size: 16px;
-}
-
-.email-note {
-  font-size: 12px;
-  margin-top: 10px;
   color: #555;
 }
 
-/* Responsive view for smaller devices */
-@media (max-width: 768px) {
-  .order-page {
-    flex-direction: column;
-    gap: 12px;
-  }
+.total {
+  margin-top: 10px;
+  font-size: 18px;
+}
 
-  .checkout-left,
-  .checkout-right {
-    width: 100%;
-  }
-
-  .confirm-btn {
-    width: 100%;
-    align-self: center;
-  }
-
-  .section {
-    padding: 10px 12px;
-  }
+.payment-section {
+  margin-top: 30px;
 }

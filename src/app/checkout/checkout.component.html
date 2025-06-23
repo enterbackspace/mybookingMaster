@@ -1,28 +1,28 @@
 <div class="checkout-wrapper">
 
-  <!-- RIGHT CARD: Price Details (moved before left content in HTML) -->
   <div class="checkout-card right-card">
     <section class="section">
       <h3>Price Details</h3>
-      <p>Item(s) total: ₹{{ itemTotal }}</p>
-      <p>Delivery Charges: <span class="text-green">Free</span></p>
-      <p>Platform Fee: ₹{{ platformFee }}</p>
+      <p><span>Total MRP:</span> <span>₹{{ totalMRP }}</span></p>
+      <p><span>Total Discount:</span> <span>- ₹{{ totalDiscount }}</span></p>
+      <p><span>Delivery Charges:</span> <span class="text-green">Free</span></p>
+      <p><span>Platform Fee:</span> <span>₹{{ platformFee }}</span></p>
       <hr />
-      <p><strong>Total Payable: ₹{{ totalPayable }}</strong></p>
+      <div class="total-payable">
+        <span>Total Payable:</span>
+        <span>₹{{ totalPayable }}</span>
+      </div>
     </section>
   </div>
 
-  <!-- LEFT CARD: User, Address, Order Summary, Place Order -->
   <div class="checkout-card left-card">
     <h2>Checkout</h2>
 
-    <!-- Login Info -->
     <section class="section">
       <h3>Login</h3>
       <p>{{ userName }} | {{ phone }}</p>
     </section>
 
-    <!-- Delivery Address -->
     <section class="section">
       <h3>Delivery Address</h3>
       <p>
@@ -31,30 +31,26 @@
         {{ address.country }}
       </p>
     </section>
- 
-<section class="section">
-  <h3>Order Summary</h3>
-  <div *ngFor="let item of cartItems" class="item-summary">
-    <div class="summary-image">
-      <img [src]="item['0'].image" alt="{{ item['0'].productName }}" />
-    </div>  
-    <div class="summary-details">
-      <p><strong>{{ item['0'].productName }}</strong></p>
-      <p>Price: ₹{{ (item['0'].mrp - (item['0'].mrp * item['0'].discount / 100)) | number:'1.0-0' }}</p>
-      <p>Price: ₹{{ item['0'].price }}</p>
-      <p>Quantity: {{ item['0'].quantity || 1 }}</p>
-      <p>Delivery: Free | Seller: {{ item['0'].seller || 'Default Seller' }}</p>
-    </div>
-  </div>
-</section>
 
-    <!-- Contact Info and Button -->
-    <section class="section contact-section">
-      <p class="contact-text">
-        Your order confirmation will be sent to <strong>{{ email }}</strong>
-      </p>
-     <button class="place-order-button" (click)="submitOrder()">Confirm Order</button>  
+    <section class="section">
+      <h3>Order Summary</h3>
+      <div *ngFor="let item of cartItems" class="item-summary">
+        <div class="summary-image"> 
+          <img [src]="item['0'].image" alt="{{ item['0'].productName }}" />
+        </div>  
+        <div class="summary-details">
+          <p><strong>{{ item['0'].productName }}</strong></p>
+          <p>Price: ₹{{ (item['0'].mrp - (item['0'].mrp * item['0'].discount / 100)) | number:'1.0-0' }}</p>
+          <p>Quantity: {{ item['0'].quantity || 1 }}</p>
+          <p>Delivery: Free | Seller: {{ item['0'].seller || 'Default Seller' }}</p>
+        </div>
+      </div>
     </section>
-  </div>
 
+    <section class="confirmation-footer">
+      <p>Your order confirmation will be sent to <strong>{{ email }}</strong></p>
+      <button class="confirm-btn" (click)="submitOrder()">Confirm Order</button>  
+    </section>
+
+  </div>
 </div>

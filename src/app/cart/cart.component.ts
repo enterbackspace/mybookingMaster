@@ -21,21 +21,15 @@ deliveryDate: Date = new Date(new Date().setDate(new Date().getDate() + 2));
 
   ngOnInit(): void {
     this.userId = sessionStorage.getItem('id');
- 
     if (!this.userId) {
       alert('User ID not found. Please log in again.');
       return;
     }
-
     this.loadCartFromServer();
-    
-// Add selected field
 this.cartItems.forEach(item => {
   item.selected = false;
 });
-
   }
-
   loadCartFromServer() {
     this.http.get<any[]>(`http://localhost:3000/Cart?userId=${this.userId}`).subscribe({
       next: (data) => {
@@ -95,25 +89,82 @@ this.cartItems.forEach(item => {
 goToMarket(){
   this.router.navigate(['/dash/user']).catch(err => console.error('Navigation error:', err));
 }
+ 
 
-
+  generateRandomId(): string {
+        return Math.random().toString(36).substr(2, 9);
+      }
+ 
 placeSelectedOrder() {
   const selectedItems = this.cartItems.filter(item => item.selected);
   if (selectedItems.length === 0) {
     this.toastr.warning('Please select at least one item.', 'No Selection');
     return;
   }
-  this.http.post('http://localhost:3000/orders', selectedItems).subscribe({
-    next: () => {
-      this.toastr.success('Order placed successfully!', 'Success');
-      this.router.navigate(['/dash/Checkout']);
+  this.http.get<any[]>('http://localhost:3000/orders').subscribe({
+    next: (existingOrders) => {
+      selectedItems.forEach(item => {
+        const existingOrder = existingOrders.find(order =>
+          order["0"]?.productId === item.productId &&
+          order["0"]?.userId === this.userId
+        );
+        if (existingOrder) {
+          // Update quantity
+          const updatedOrder = {
+            ...existingOrder,
+            "0": {
+              ...existingOrder["0"],
+              quantity: existingOrder["0"].quantity + (item.quantity || 1)
+            }
+          };
+          this.http.put(`http://localhost:3000/orders/${existingOrder.id}`, updatedOrder).subscribe({
+            next: () => {
+              this.toastr.success(`Quantity updated for ${item.productName}`, 'Updated');
+              this.router.navigate(['/dash/Checkout']);
+            },
+            error: (err) => {
+              console.error('Update failed:', err);
+              this.toastr.error('Failed to update order.', 'Error');
+            }
+          });
+        } else {
+          // New order
+          const newOrder = {
+            "0": {
+              id: this.generateRandomId(),
+              userId: this.userId,
+              productId: item.productId,
+              quantity: item.quantity || 1,
+              productName: item.productName,
+              price: item.price,
+              mrp: item.mrp,
+              image: item.imageUrl,
+              selected: true
+            },
+            id: this.generateRandomId() // Top-level ID for the order
+          };
+
+          this.http.post('http://localhost:3000/orders', newOrder).subscribe({
+            next: () => {
+              this.toastr.success(`Order placed for ${item.productName}`, 'Success');
+              this.router.navigate(['/dash/Checkout']);
+            },
+            error: (err) => {
+              console.error('Placement failed:', err);
+              this.toastr.error('Failed to place order.', 'Error');
+            }
+          });
+        }
+      });
     },
     error: (err) => {
-      console.error('Order placement failed:', err);
-      this.toastr.error('Failed to place order.', 'Error');
+      console.error('Failed to fetch orders:', err);
+      this.toastr.error('Failed to load existing orders.', 'Error');
     }
   });
 }
+
+
 
 
  

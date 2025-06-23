@@ -31,3 +31,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     transform: scale(1);
   }
 } 
+.order-dialog .cdk-overlay-pane {
+  border-radius: 16px;
+  overflow: hidden;
+}

@@ -31,7 +31,7 @@
       "description": "Fresh and aromatic curry leaves ideal for South Indian tempering and flavoring.",
       "category": "Leafy Greens",
       "unit": "bunch",
-      "discount": "50%",
+      "discount": "50",
       "stock": 50,
       "rating": 4.5,
       "tags": [
@@ -57,7 +57,7 @@
       "description": "Juicy red tomatoes perfect for making sauces, salads, and gravies.",
       "category": "Fruit Vegetables",
       "unit": "kg",
-      "discount": "25%",
+      "discount": "25",
       "stock": 100,
       "rating": 4.2,
       "tags": [
@@ -83,7 +83,7 @@
       "description": "Organic potatoes ideal for frying, boiling, and roasting.",
       "category": "Root Vegetables",
       "unit": "kg",
-      "discount": "29%",
+      "discount": "29",
       "stock": 200,
       "rating": 4,
       "tags": [
@@ -109,7 +109,7 @@
       "description": "Bright orange carrots perfect for salads, soups, and juicing.",
       "category": "Root Vegetables",
       "unit": "kg",
-      "discount": "24%",
+      "discount": "24",
       "stock": 120,
       "rating": 4.3,
       "tags": [
@@ -135,7 +135,7 @@
       "description": "Fresh spinach leaves ideal for soups, curries, and salads.",
       "category": "Leafy Greens",
       "unit": "bunch",
-      "discount": "33%",
+      "discount": "33",
       "stock": 80,
       "rating": 4.6,
       "tags": [
@@ -161,7 +161,7 @@
       "description": "Crisp, fresh onions perfect for sautéing, curries, and salads.",
       "category": "Bulb Vegetables",
       "unit": "kg",
-      "discount": "27%",
+      "discount": "27",
       "stock": 150,
       "rating": 4.1,
       "tags": [
@@ -187,7 +187,7 @@
       "description": "Firm green cabbage, perfect for slaws, soups, and stir-fries.",
       "category": "Cruciferous Vegetables",
       "unit": "piece",
-      "discount": "27%",
+      "discount": "27",
       "stock": 60,
       "rating": 4.4,
       "tags": [
@@ -213,7 +213,7 @@
       "description": "Crisp red bell peppers, great for salads, stuffing, and stir-fries.",
       "category": "Fruit Vegetables",
       "unit": "500g",
-      "discount": "25%",
+      "discount": "25",
       "stock": 70,
       "rating": 4.7,
       "tags": [
@@ -239,7 +239,7 @@
       "description": "Fresh broccoli heads ideal for steaming, roasting, and stir-fries.",
       "category": "Cruciferous Vegetables",
       "unit": "piece",
-      "discount": "29%",
+      "discount": "29",
       "stock": 40,
       "rating": 4.5,
       "tags": [
@@ -265,7 +265,7 @@
       "description": "Fresh cauliflower heads perfect for curries, roasting, and salads.",
       "category": "Cruciferous Vegetables",
       "unit": "piece",
-      "discount": "31%",
+      "discount": "31",
       "stock": 50,
       "rating": 4.3,
       "tags": [
@@ -291,7 +291,7 @@
       "description": "Organic beetroots rich in antioxidants, perfect for salads and soups.",
       "category": "Root Vegetables",
       "unit": "kg",
-      "discount": "25%",
+      "discount": "25",
       "stock": 80,
       "rating": 4.2,
       "tags": [
@@ -317,7 +317,7 @@
       "description": "Fresh zucchinis ideal for grilling, sautéing, and baking.",
       "category": "Gourd Vegetables",
       "unit": "500g",
-      "discount": "27%",
+      "discount": "27",
       "stock": 60,
       "rating": 4.4,
       "tags": [
@@ -343,7 +343,7 @@
       "description": "Organic eggplants perfect for curries, roasting, and grilling.",
       "category": "Nightshade Vegetables",
       "unit": "kg",
-      "discount": "28%",
+      "discount": "28",
       "stock": 70,
       "rating": 4.1,
       "tags": [
@@ -369,7 +369,7 @@
       "description": "Fresh okra pods ideal for curries, stews, and sautéing.",
       "category": "Pods & Seeds",
       "unit": "500g",
-      "discount": "29%",
+      "discount": "29",
       "stock": 55,
       "rating": 4,
       "tags": [
@@ -395,7 +395,7 @@
       "description": "Crisp green beans perfect for stir-fries, steaming, and salads.",
       "category": "Pods & Seeds",
       "unit": "500g",
-      "discount": "24%",
+      "discount": "24",
       "stock": 90,
       "rating": 4.5,
       "tags": [
@@ -421,7 +421,7 @@
       "description": "Fresh green peas ideal for curries, pilafs, and mixed veggies.",
       "category": "Pods & Seeds",
       "unit": "500g",
-      "discount": "26%",
+      "discount": "26",
       "stock": 75,
       "rating": 4.2,
       "tags": [
@@ -447,7 +447,7 @@
       "description": "Flavorful garlic cloves perfect for seasoning, marinades, and sauces.",
       "category": "Bulb Vegetables",
       "unit": "250g",
-      "discount": "25%",
+      "discount": "25",
       "stock": 140,
       "rating": 4.7,
       "tags": [
@@ -473,7 +473,7 @@
       "description": "Fresh ginger roots ideal for teas, curries, and ginger-infused dishes.",
       "category": "Rhizomes",
       "unit": "250g",
-      "discount": "27%",
+      "discount": "27",
       "stock": 120,
       "rating": 4.6,
       "tags": [
@@ -499,7 +499,7 @@
       "description": "Fragrant coriander leaves perfect for garnishing soups, curries, and salads.",
       "category": "Leafy Greens",
       "unit": "bunch",
-      "discount": "28%",
+      "discount": "28",
       "stock": 150,
       "rating": 4.8,
       "tags": [
@@ -525,7 +525,7 @@
       "description": "Cool and refreshing mint leaves ideal for chutneys, teas, and salads.",
       "category": "Leafy Greens",
       "unit": "bunch",
-      "discount": "27%",
+      "discount": "27",
       "stock": 130,
       "rating": 4.7,
       "tags": [
@@ -551,7 +551,7 @@
       "description": "Fresh romaine lettuce heads ideal for salads, wraps, and sandwiches.",
       "category": "Leafy Greens",
       "unit": "head",
-      "discount": "29%",
+      "discount": "29",
       "stock": 70,
       "rating": 4.3,
       "tags": [
@@ -577,7 +577,7 @@
       "description": "Organic kale leaves perfect for salads, smoothies, and sautés.",
       "category": "Leafy Greens",
       "unit": "bunch",
-      "discount": "25%",
+      "discount": "25",
       "stock": 90,
       "rating": 4.6,
       "tags": [
@@ -603,7 +603,7 @@
       "description": "Fresh arugula leaves perfect for peppery salads, pizzas, and sandwiches.",
       "category": "Leafy Greens",
       "unit": "bunch",
-      "discount": "27%",
+      "discount": "27",
       "stock": 60,
       "rating": 4.4,
       "tags": [
@@ -629,7 +629,7 @@
       "description": "Crisp radishes perfect for salads, pickles, and garnishes.",
       "category": "Root Vegetables",
       "unit": "500g",
-      "discount": "30%",
+      "discount": "30",
       "stock": 80,
       "rating": 4.2,
       "tags": [
@@ -655,7 +655,7 @@
       "description": "Cool and crunchy cucumbers ideal for salads, raita, and sandwiches.",
       "category": "Gourd Vegetables",
       "unit": "kg",
-      "discount": "33%",
+      "discount": "33",
       "stock": 95,
       "rating": 4.5,
       "tags": [
@@ -681,7 +681,7 @@
       "description": "Organic pumpkin pieces perfect for soups, curries, and baking.",
       "category": "Gourd Vegetables",
       "unit": "kg",
-      "discount": "23%",
+      "discount": "23",
       "stock": 45,
       "rating": 4.1,
       "tags": [
@@ -707,7 +707,7 @@
       "description": "Fresh sweet corn ears ideal for boiling, grilling, and salads.",
       "category": "Grain Vegetables",
       "unit": "2 ears",
-      "discount": "24%",
+      "discount": "24",
       "stock": 70,
       "rating": 4.3,
       "tags": [
@@ -733,7 +733,7 @@
       "description": "Fresh button mushrooms perfect for sautés, soups, and salads.",
       "category": "Fungi",
       "unit": "250g",
-      "discount": "25%",
+      "discount": "25",
       "stock": 60,
       "rating": 4.4,
       "tags": [
@@ -759,7 +759,7 @@
       "description": "Tender asparagus stalks ideal for steaming, grilling, and salads.",
       "category": "Stem Vegetables",
       "unit": "250g",
-      "discount": "22%",
+      "discount": "22",
       "stock": 40,
       "rating": 4.7,
       "tags": [
@@ -785,7 +785,7 @@
       "description": "Fresh Brussels sprouts ideal for roasting, steaming, and salads.",
       "category": "Cruciferous Vegetables",
       "unit": "500g",
-      "discount": "23%",
+      "discount": "23",
       "stock": 50,
       "rating": 4.2,
       "tags": [
@@ -811,7 +811,7 @@
       "description": "Fresh celery stalks ideal for soups, salads, and snacking.",
       "category": "Leafy Greens",
       "unit": "bunch",
-      "discount": "24%",
+      "discount": "24",
       "stock": 65,
       "rating": 4.3,
       "tags": [
@@ -837,7 +837,7 @@
       "description": "Fresh leeks perfect for soups, stews, and sautés.",
       "category": "Allium Vegetables",
       "unit": "2 stalks",
-      "discount": "26%",
+      "discount": "26",
       "stock": 55,
       "rating": 4.4,
       "tags": [
@@ -863,7 +863,7 @@
       "description": "Fresh spring onions ideal for garnishing, salads, and stir-fries.",
       "category": "Allium Vegetables",
       "unit": "bunch",
-      "discount": "29%",
+      "discount": "29",
       "stock": 120,
       "rating": 4.5,
       "tags": [
@@ -889,7 +889,7 @@
       "description": "Fresh fennel bulbs perfect for salads, roasting, and braising.",
       "category": "Leafy Greens",
       "unit": "piece",
-      "discount": "24%",
+      "discount": "24",
       "stock": 45,
       "rating": 4.6,
       "tags": [
@@ -915,7 +915,7 @@
       "description": "Premium organic artichokes ideal for steaming, baking, and salads.",
       "category": "Thistle Vegetables",
       "unit": "piece",
-      "discount": "20%",
+      "discount": "20",
       "stock": 25,
       "rating": 4.4,
       "tags": [
@@ -941,7 +941,7 @@
       "description": "Vibrant swiss chard leaves perfect for sautés, soups, and stews.",
       "category": "Leafy Greens",
       "unit": "bunch",
-      "discount": "26%",
+      "discount": "26",
       "stock": 40,
       "rating": 4.3,
       "tags": [
@@ -967,7 +967,7 @@
       "description": "Fresh bok choy perfect for Asian stir-fries, soups, and sautés.",
       "category": "Leafy Greens",
       "unit": "500g",
-      "discount": "25%",
+      "discount": "25",
       "stock": 50,
       "rating": 4.5,
       "tags": [
@@ -993,7 +993,7 @@
       "description": "Tender collard greens perfect for braising, sautés, and stews.",
       "category": "Leafy Greens",
       "unit": "bunch",
-      "discount": "23%",
+      "discount": "23",
       "stock": 35,
       "rating": 4.2,
       "tags": [
@@ -1019,7 +1019,7 @@
       "description": "Organic turnips ideal for roasting, stews, and mash.",
       "category": "Root Vegetables",
       "unit": "kg",
-      "discount": "24%",
+      "discount": "24",
       "stock": 65,
       "rating": 4.1,
       "tags": [
@@ -1045,7 +1045,7 @@
       "description": "Sweet parsnips perfect for roasting, soups, and stews.",
       "category": "Root Vegetables",
       "unit": "500g",
-      "discount": "27%",
+      "discount": "27",
       "stock": 50,
       "rating": 4.3,
       "tags": [
@@ -1071,7 +1071,7 @@
       "description": "Organic yams ideal for boiling, roasting, and mashing.",
       "category": "Root Vegetables",
       "unit": "kg",
-      "discount": "22%",
+      "discount": "22",
       "stock": 40,
       "rating": 4.2,
       "tags": [
@@ -1097,7 +1097,7 @@
       "description": "Fresh taro roots perfect for boiling, stews, and curries.",
       "category": "Root Vegetables",
       "unit": "kg",
-      "discount": "24%",
+      "discount": "24",
       "stock": 35,
       "rating": 4,
       "tags": [
@@ -1123,7 +1123,7 @@
       "description": "Organic kohlrabi bulbs perfect for salads, roasting, and slaws.",
       "category": "Stem Vegetables",
       "unit": "kg",
-      "discount": "24%",
+      "discount": "24",
       "stock": 45,
       "rating": 4.3,
       "tags": [
@@ -1149,7 +1149,7 @@
       "description": "Crisp daikon radishes ideal for salads, pickles, and garnishes.",
       "category": "Root Vegetables",
       "unit": "kg",
-      "discount": "23%",
+      "discount": "23",
       "stock": 60,
       "rating": 4.2,
       "tags": [
@@ -1175,7 +1175,7 @@
       "description": "Fresh jalapeño peppers perfect for salsas, pickles, and spicy dishes.",
       "category": "Chili Peppers",
       "unit": "250g",
-      "discount": "21%",
+      "discount": "21",
       "stock": 85,
       "rating": 4.4,
       "tags": [
@@ -1201,7 +1201,7 @@
       "description": "Dry red chilies ideal for making chili powder, curries, and pickles.",
       "category": "Chili Peppers",
       "unit": "100g",
-      "discount": "22%",
+      "discount": "22",
       "stock": 100,
       "rating": 4.1,
       "tags": [
@@ -1227,7 +1227,7 @@
       "description": "Organic sweet potatoes perfect for baking, roasting, and mashing.",
       "category": "Root Vegetables",
       "unit": "kg",
-      "discount": "26%",
+      "discount": "26",
       "stock": 60,
       "rating": 4.3,
       "tags": [
@@ -1247,13 +1247,13 @@
       "type": "veg",
       "isactive": true,
       "imageUrl": "assets/Turmeric Root.jpg",
-      "mrp": "80",
-      "price": "60",
+      "mrp": 80,
+      "price": 60,
       "id": "48",
       "description": "Fresh turmeric roots ideal for grinding into powder and health tonics.",
       "category": "Rhizomes",
       "unit": "250g",
-      "discount": "25%",
+      "discount": 25,
       "stock": 50,
       "rating": 4.7,
       "tags": [
@@ -1273,13 +1273,13 @@
       "type": "veg",
       "isactive": true,
       "imageUrl": "assets/Galangal.jpg",
-      "mrp": "110",
-      "price": "85",
+      "mrp": 110,
+      "price": 85,
       "id": "49",
       "description": "Fresh galangal roots perfect for Thai curries, soups, and marinades.",
       "category": "Rhizomes",
       "unit": "250g",
-      "discount": "23%",
+      "discount": 23,
       "stock": 30,
       "rating": 4.5,
       "tags": [
@@ -1299,13 +1299,13 @@
       "type": "veg",
       "isactive": true,
       "imageUrl": "assets/Shallots.jpg",
-      "mrp": "70",
-      "price": "50",
+      "mrp": 70,
+      "price": 50,
       "id": "50",
       "description": "Delicate shallots perfect for dressings, sautés, and garnishes.",
       "category": "Allium Vegetables",
       "unit": "250g",
-      "discount": "29%",
+      "discount": 29,
       "stock": 80,
       "rating": 4.2,
       "tags": [
@@ -1365,52 +1365,189 @@
   ],
   "Cart": [
     {
-      "id": "3411",
+      "id": "aebc",
       "userId": "1",
-      "productId": "V100090",
-      "quantity": 2,
-      "productName": "Tomato, 1 kg",
-      "price": "30",
-      "mrp": "40",
-      "image": "https://eaglefox.in/wp-content/uploads/2020/04/fresh-tomato-1024x1024.jpg"
+      "productId": "V100092",
+      "quantity": 1,
+      "productName": "Carrot, 1 kg",
+      "price": 38,
+      "mrp": 50,
+      "image": "assets/carrot.jpg"
     },
     {
-      "id": "150a",
+      "id": "d051",
       "userId": "1",
-      "productId": "V100091",
-      "quantity": 2,
-      "productName": "Potato, 1 kg",
-      "price": "25",
-      "mrp": "35",
-      "image": "assets/potato.png"
-    },
-    {
-      "id": "8e74",
-      "userId": "1",
-      "productId": "V100095",
-      "quantity": 5,
-      "productName": "Cabbage, 1 Piece",
-      "price": "40",
-      "mrp": "55",
-      "image": "assets/Cabbage.png",
-      "selected": true
+      "productId": "V100089",
+      "quantity": 1,
+      "productName": "Curry Leaves, 1 Bunch",
+      "price": 12,
+      "mrp": 24,
+      "image": "https://th.bing.com/th/id/OIP.Um1MhltLED0GkQ6dkNyV6gHaE8?pid=ImgDet&rs=1"
     }
   ],
   "Favorite": [],
+  "Confirmed": [
+    {
+      "0": {
+        "id": "npbxuxk49",
+        "userId": "1",
+        "productId": "V100092",
+        "quantity": 3,
+        "productName": "Carrot, 1 kg",
+        "selected": true,
+        "image": "assets/carrot.jpg"
+      },
+      "id": "29ae",
+      "Orderid": "ORD1750676614626"
+    },
+    {
+      "0": {
+        "id": "qxmn6yfu6",
+        "userId": "1",
+        "productId": "V100089",
+        "quantity": 6,
+        "productName": "Curry Leaves, 1 Bunch",
+        "selected": true,
+        "image": "https://th.bing.com/th/id/OIP.Um1MhltLED0GkQ6dkNyV6gHaE8?pid=ImgDet&rs=1"
+      },
+      "id": "16ac",
+      "Orderid": "ORD1750676614626"
+    },
+    {
+      "0": {
+        "id": "r13zxd936",
+        "userId": "1",
+        "productId": "V100090",
+        "quantity": 1,
+        "productName": "Tomato, 1 kg",
+        "selected": true,
+        "image": "https://eaglefox.in/wp-content/uploads/2020/04/fresh-tomato-1024x1024.jpg"
+      },
+      "id": "ff00",
+      "Orderid": "ORD1750676614626"
+    },
+    {
+      "0": {
+        "id": "kr6tgub60",
+        "userId": "1",
+        "productId": "V100091",
+        "quantity": 3,
+        "productName": "Potato, 1 kg",
+        "selected": true,
+        "image": "assets/potato.png"
+      },
+      "id": "b259",
+      "Orderid": "ORD1750676614626"
+    },
+    {
+      "0": {
+        "id": "npbxuxk49",
+        "userId": "1",
+        "productId": "V100092",
+        "quantity": 3,
+        "productName": "Carrot, 1 kg",
+        "selected": true,
+        "image": "assets/carrot.jpg"
+      },
+      "id": "a0fd",
+      "Orderid": "ORD1750676657369"
+    },
+    {
+      "0": {
+        "id": "qxmn6yfu6",
+        "userId": "1",
+        "productId": "V100089",
+        "quantity": 6,
+        "productName": "Curry Leaves, 1 Bunch",
+        "selected": true,
+        "image": "https://th.bing.com/th/id/OIP.Um1MhltLED0GkQ6dkNyV6gHaE8?pid=ImgDet&rs=1"
+      },
+      "id": "fcff",
+      "Orderid": "ORD1750676657369"
+    },
+    {
+      "0": {
+        "id": "kr6tgub60",
+        "userId": "1",
+        "productId": "V100091",
+        "quantity": 3,
+        "productName": "Potato, 1 kg",
+        "selected": true,
+        "image": "assets/potato.png"
+      },
+      "id": "d919",
+      "Orderid": "ORD1750676657369"
+    },
+    {
+      "0": {
+        "id": "r13zxd936",
+        "userId": "1",
+        "productId": "V100090",
+        "quantity": 1,
+        "productName": "Tomato, 1 kg",
+        "selected": true,
+        "image": "https://eaglefox.in/wp-content/uploads/2020/04/fresh-tomato-1024x1024.jpg"
+      },
+      "id": "db41",
+      "Orderid": "ORD1750676657369"
+    }
+  ],
   "orders": [
+    {
+      "0": {
+        "id": "4",
+        "userId": "1",
+        "productId": "V100092",
+        "quantity": 3,
+        "productName": "Carrot, 1 kg",
+        "mrp": 50,
+        "discount": 24,
+        "image": "assets/carrot.jpg",
+        "selected": true
+      },
+      "id": "npbxuxk49"
+    },
     {
       "0": {
         "id": "1",
         "userId": "1",
         "productId": "V100089",
-        "quantity": 1,
+        "quantity": 6,
         "productName": "Curry Leaves, 1 Bunch",
-        "mrp": "24",
-        "discount": "50%",
+        "mrp": 24,
+        "discount": 50,
         "image": "https://th.bing.com/th/id/OIP.Um1MhltLED0GkQ6dkNyV6gHaE8?pid=ImgDet&rs=1",
         "selected": true
       },
-      "id": "4u7jwvk9i"
+      "id": "qxmn6yfu6"
+    },
+    {
+      "0": {
+        "id": "2",
+        "userId": "1",
+        "productId": "V100090",
+        "quantity": 1,
+        "productName": "Tomato, 1 kg",
+        "mrp": 40,
+        "discount": 25,
+        "image": "https://eaglefox.in/wp-content/uploads/2020/04/fresh-tomato-1024x1024.jpg",
+        "selected": true
+      },
+      "id": "r13zxd936"
+    },
+    {
+      "0": {
+        "id": "926un4ruf",
+        "userId": "1",
+        "productId": "V100091",
+        "quantity": 3,
+        "productName": "Potato, 1 kg",
+        "mrp": 35,
+        "discount": 29,
+        "image": "assets/potato.png",
+        "selected": true
+      },
+      "id": "kr6tgub60"
     }
   ]
 }

@@ -13,7 +13,8 @@ export class UserCompComponent implements OnInit {
   Search:string='';
   userId: any = sessionStorage.getItem('id');
 productAddedSet = new Set<string>()
-productAdded: boolean = false
+productAdded: boolean = false;
+  quantities = Array.from({ length: 10 }, (_, i) => i + 1);  // Quantity options 1 to 10
   constructor(public route: Router, public http: HttpClient, public toastr: ToastrService) {}
   ngOnInit(): void {
     this.http.get('http://localhost:3000/vegitable').subscribe({
@@ -27,6 +28,11 @@ productAdded: boolean = false
         
       }
     });
+     this.product.forEach(p => {
+    if (!p.quantity || p.quantity < 1) {
+      p.quantity = 1;
+    }
+  });
   }
   goToCart() {
     this.route.navigate(['/dash/cart'])
@@ -152,35 +158,74 @@ deleteFromFav(product: any) {
           return Math.random().toString(36).substr(2, 9);
         }
 
- 
-placeSelectedOrder(product: any) {
-  const formattedOrder = {
-    "0": {
-      id: product.id,
-      userId:this.userId,
-      productId: product.productId,
-      quantity: 1,
-      productName: product.ProductName,
-      // price: product.price,
-      mrp: product.mrp,
-      discount: product.discount || 0,
-      image: product.imageUrl,
-      selected: true
-    },
-    id: this.generateRandomId() // Unique order ID
-  };
+ placeSelectedOrder(product: any) {
+  // First, fetch existing orders
+  this.http.get<any[]>('http://localhost:3000/orders').subscribe({
+    next: (orders) => {
+      // Check if the same product exists for this user
+      const existingOrder = orders.find(order =>
+        order["0"]?.productId === product.productId &&
+        order["0"]?.userId === this.userId
+      );
 
-  this.http.post('http://localhost:3000/orders', formattedOrder).subscribe({
-    next: () => {
-      this.toastr.success('Order placed successfully!', 'Success');
-      this.route.navigate(['/dash/Checkout']);
+      if (existingOrder) {
+        // If it exists, update the quantity
+        const updatedQuantity = existingOrder["0"].quantity + 1;
+        const updatedOrder = {
+          ...existingOrder,
+          "0": {
+            ...existingOrder["0"],
+            quantity: updatedQuantity
+          }
+        };
+
+        this.http.put(`http://localhost:3000/orders/${existingOrder.id}`, updatedOrder).subscribe({
+          next: () => {
+            this.toastr.success('Order quantity updated successfully!', 'Success');
+            this.route.navigate(['/dash/Checkout']);
+          },
+          error: (err) => {
+            console.error('Failed to update order:', err);
+            this.toastr.error('Failed to update order.', 'Error');
+          }
+        });
+
+      } else {
+        // If not found, place a new order
+        const newOrder = {
+          "0": {
+            id: product.id,
+            userId: this.userId,
+            productId: product.productId,
+            quantity: 1,
+            productName: product.ProductName,
+            mrp: product.mrp,
+            discount: product.discount || 0,
+            image: product.imageUrl,
+            selected: true
+          },
+          id: this.generateRandomId() // Unique order ID
+        };
+
+        this.http.post('http://localhost:3000/orders', newOrder).subscribe({
+          next: () => {
+            this.toastr.success('Order placed successfully!', 'Success');
+            this.route.navigate(['/dash/Checkout']);
+          },
+          error: (err) => {
+            console.error('Order placement failed:', err);
+            this.toastr.error('Failed to place order.', 'Error');
+          }
+        });
+      }
     },
     error: (err) => {
-      console.error('Order placement failed:', err);
-      this.toastr.error('Failed to place order.', 'Error');
+      console.error('Failed to fetch existing orders:', err);
+      this.toastr.error('Failed to check existing orders.', 'Error');
     }
   });
 }
+
  
 
 }

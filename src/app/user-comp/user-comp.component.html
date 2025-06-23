@@ -1,68 +1,86 @@
-   <!-- 🔍 Search Bar -->
-  <mat-form-field class="search-field mt-3" appearance="outline">
+<div> 
+<div class="toolbar">
+  <mat-form-field class="search-field" appearance="outline">
     <mat-label>Search</mat-label>
-    <input matInput placeholder="Search products..." [(ngModel)]="Search" />
-    <button mat-icon-button matSuffix >
+    <input matInput placeholder="Search products…" [(ngModel)]="Search" />    <button mat-icon-button matSuffix>
       <mat-icon>search</mat-icon>
     </button>
   </mat-form-field>
+</div>
+
+<!-- 🛒 Product grid -->
 <div class="product-container">
-  <mat-card class="product-card" *ngFor="let product of product | search:Search">
-    <!-- Image + Favorite Button Wrapper -->
-    <div class="image-wrapper" [routerLink]="['/dash/productdetails', product.id]">
-      <img mat-card-image [src]="product.imageUrl" alt="{{ product.ProductName }}" />
-      <!-- Out of stock badge -->
-      <div class="stock-badge" *ngIf="product.stock <= 0">Out of Stock</div>
-      <!-- Favorite button: stops click propagation -->
-      <button
-        class="favorite-btn"
-        matTooltip="Add to Wishlist"
-        aria-label="Toggle favorite"
-        (click)="toggleFavoriteStatus(product); $event.stopPropagation()"
->
-        <ng-container *ngIf="product.favorite; else notFav">❤️</ng-container>
-        <ng-template #notFav>🤍</ng-template>
+  <mat-card class="product-card"
+            *ngFor="let product of product | search: Search">
+
+    <!-- 📸 Image + status overlays -->
+    <div class="image-wrapper"
+         [routerLink]="['/dash/productdetails', product.id]">
+      <img mat-card-image
+           [src]="product.imageUrl"
+           alt="{{ product.ProductName }}"
+           loading="lazy" />
+
+      <span class="discount-chip"
+            *ngIf="product.discount">{{ product.discount }} OFF</span>
+
+      <span class="stock-badge"
+            *ngIf="product.stock <= 0">Out of Stock</span>
+
+      <button mat-icon-button
+              class="favorite-btn"
+              matTooltip="Add to Wishlist"
+              aria-label="Toggle favorite"
+              (click)="toggleFavoriteStatus(product); $event.stopPropagation()">
+        <mat-icon>{{ product.favorite ? 'favorite' : 'favorite_border' }}</mat-icon>
       </button>
     </div>
-    <mat-card-content>
-      <h2 class="product-name">{{ product.ProductName }}</h2>
-      <p class="ingredients">🧂 Ingredients: {{ product.Ingerdiance }}</p>
 
+    <!-- 📄 Details -->
+    <mat-card-content>
+      <h3 class="product-name">{{ product.ProductName }}</h3>
+      <p class="ingredients">🧂 Ingredients: {{ product.Ingerdiance }}</p>
       <p class="product-type" [ngClass]="product.type">
         {{ product.type | titlecase }}
       </p>
 
-   <!-- Pricing -->
-<p class="price-info">
-  <span class="mrp"><b>MRP:</b> ₹{{ product.mrp }}</span>
-  <span><strong>Price:</strong>
-  ₹{{ (product.mrp - (product.mrp * (product.discount.replace('%', '') / 100))) | number:'1.2-2' }}
-</span>
-  <span class="discount">
-    You Save:
-    ₹{{ (product.mrp * product.discount / 100) | number:'1.2-2' }}
-    ({{ product.discount }}%)
-  </span>
-</p>
-
-
+      <div class="price-info">
+        <span class="mrp">MRP: ₹{{ product.mrp }}</span>
+        <span class="price">
+          Price:
+          ₹{{ (product.mrp - (product.mrp * (product.discount.replace('%', '') / 100))) | number:'1.2-2' }}
+        </span>
+        <span class="discount">
+          You Save:
+          ₹{{ (product.mrp * product.discount / 100) | number:'1.2-2' }}
+        </span>
+      </div>
     </mat-card-content>
-    <mat-card-actions class="action-buttons">
-      <button mat-raised-button color="primary" [disabled]="product.stock <= 0"   (click)="placeSelectedOrder(product)" >
-        Buy Now
+
+    <!-- ✨ Actions -->
+    <mat-card-actions align="end"  >
+      <button mat-raised-button
+              color="primary"
+              [disabled]="product.stock <= 0"
+              (click)="placeSelectedOrder(product)">
+        Buy&nbsp;Now
+      </button>  
+ 
+      <button *ngIf="!isProductAdded(product)"  
+              mat-raised-button
+              style="background-color: rgb(77, 90, 51); color: white;"
+              [disabled]="product.stock <= 0"
+              (click)="addToCart(product)">
+        Add&nbsp;to&nbsp;Cart
       </button>
-      <ng-container *ngIf="!isProductAdded(product)">
-        <button
-          mat-raised-button
-          color="accent"
-          [disabled]="product.stock <= 0"
-          (click)="addToCart(product)" >
-          Add to Cart
-        </button>
-      </ng-container>
-      <ng-container *ngIf="isProductAdded(product)">
-        <button mat-raised-button color="warn" (click)="goToCart()">Go to Cart</button>
-      </ng-container>
+
+      <button *ngIf="isProductAdded(product)"
+              mat-raised-button
+              color="warn"
+              (click)="goToCart()">
+        Go&nbsp;to&nbsp;Cart
+      </button>
     </mat-card-actions>
   </mat-card>
+</div>
 </div>

@@ -1,1 +1,35 @@
- 
+<h2 mat-dialog-title>🧾 Confirm Your Order</h2>
+
+<mat-dialog-content>
+  <div class="cart-summary">
+    <h3>🛒 Items in Cart</h3>
+
+    <div *ngFor="let item of cartItems" class="cart-item">
+      <img [src]="item.image || 'https://via.placeholder.com/50'" alt="{{ item.productName }}" class="product-image" />
+
+      <div class="item-details">
+        <div class="product-name">{{ item.productName }}</div>
+        <div class="product-info">₹{{ item.price }} × {{ item.quantity }}</div>
+        <div class="product-total">= ₹{{ item.price * item.quantity }}</div>
+      </div>
+    </div>
+
+    <div class="total mt-3">
+      <strong>Total: ₹{{ total }}</strong>
+    </div>
+  </div>
+
+  <div class="payment-section mt-4">
+    <h3>💳 Select Payment Method</h3>
+    <mat-radio-group [(ngModel)]="paymentMethod">
+      <mat-radio-button value="cash">Cash on Delivery</mat-radio-button>
+      <mat-radio-button value="card">Credit/Debit Card</mat-radio-button>
+      <mat-radio-button value="upi">UPI</mat-radio-button>
+    </mat-radio-group>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="confirmOrder()">Place Order</button>
+</mat-dialog-actions>

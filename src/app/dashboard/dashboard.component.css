@@ -1,5 +1,7 @@
 .top-toolbar {
-  background-color:#FF9800;
+
+
+  background-color:rgb(77, 90, 51);
   color: white;
 
   .brand {
@@ -101,7 +103,7 @@
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #2F855A;
+  color: #bdbdbd;
 }
 
 
