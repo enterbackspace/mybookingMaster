@@ -188,3 +188,12 @@
     align-self: flex-end;
   }
 }
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 16px;
+  padding: 16px;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+}

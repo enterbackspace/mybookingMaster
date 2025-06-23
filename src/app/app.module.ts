@@ -48,7 +48,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { OrderComponent } from './order/order.component';
  // import { OrderComponent } from './orders/orders.component'; // Removed to avoid duplicate identifier error
-
+import {MatCheckboxModule} from '@angular/material/checkbox';
 @NgModule({
   declarations: [
     AppComponent,
@@ -101,7 +101,8 @@ import { OrderComponent } from './order/order.component';
     MatSnackBarModule,
     MatChipsModule,
     MatDividerModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

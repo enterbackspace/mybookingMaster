@@ -3,11 +3,11 @@
   <div class="cart-left">
     <mat-card class="cart-item" *ngFor="let item of cartItems">
       <div class="item-content">
+       <mat-checkbox  [(ngModel)]="item.selected"  class="cart-checkbox"></mat-checkbox>
         <!-- Image -->
         <div class="item-image">
           <img [src]="item.image" alt="{{ item.productName }}" />
         </div>
-
        <div class="item-details">
   <h3 class="item-name">{{ item.productName }}</h3>
   <p class="seller">Sold by: {{ item.seller || 'Retailer' }}</p>
@@ -55,7 +55,7 @@
       <hr />
       <div class="price-line total">Total Amount: <span>₹{{ grandTotal + 19 }}</span></div>
       <p class="savings">You will save ₹{{ totalDiscount }} on this order</p>
-      <button mat-raised-button color="primary" class="place-order" (click)="checkout()">Place Order</button>
+      <button mat-raised-button color="primary" class="place-order" (click)="placeSelectedOrder()">Place Order</button>
     </mat-card>
   </div>
 </div>

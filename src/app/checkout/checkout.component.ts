@@ -3,49 +3,61 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Dialog } from '@angular/cdk/dialog';
 import { OrderComponent } from '../order/order.component';
-
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent {
-  constructor(public http: HttpClient,public route:Router,public dialog:Dialog) { }
-  userName: string = '';
-  userId: any = sessionStorage.getItem('id');
-  address: any = '';
-  phone: string = '';
-  paymentMethod: string = ''; 
-   grandTotal: number = 0;
-  deliveryDate: Date = new Date(new Date().setDate(new Date().getDate() + 2));
 
-  cartItems: any[] = [];
+
+
+constructor(public http: HttpClient,public route:Router,public dialog:Dialog) { }
+
+
+userName: string = '';
+userId: any = sessionStorage.getItem('id');
+address: any = '';
+phone: string = '';
+paymentMethod: string = ''; 
+grandTotal: number = 0;
+deliveryDate: Date = new Date(new Date().setDate(new Date().getDate() + 2));
+cartItems: any[] = [];
 itemTotal: number = 0;
 platformFee: number = 4;
 totalPayable: number = 0;
 email: string = '';
 
+
+
+
+
 ngOnInit() {
   this.userName = sessionStorage.getItem('username') || '';
-  // this.address = sessionStorage.getItem('address') || '';
   this.phone = sessionStorage.getItem('mobile') || '';
   this.email = sessionStorage.getItem('email') || '';
   const addressString = sessionStorage.getItem('address');
 if (addressString) {
   this.address = JSON.parse(addressString);
 } else {
-  this.address = null; // or {}
+  this.address = null;  
+}
+  this.userId = sessionStorage.getItem('id') || '';
+
+  if (!this.userId) {
+    alert('User ID not found. Please log in again.');
+    return
+     
+  }
+
+this.getorders();
 }
 
-
-  this.http.get<any[]>(`http://localhost:3000/Cart?userId=${this.userId}`).subscribe((items) => {
-    this.cartItems = items;
-    this.itemTotal = items.reduce((sum, item) => sum + item.price * (item.quantity || 1), 0);
-    this.totalPayable = this.itemTotal + this.platformFee;
-  });
-}
 submitOrder() {
-  console.log('submitOrder called');
+  if (this.cartItems.length === 0) {
+    alert('Your cart is empty!');
+    return;
+  }
   this.dialog.open(OrderComponent, {
     width: '90%',
     maxWidth: '100%',
@@ -53,16 +65,37 @@ submitOrder() {
     panelClass: 'order-dialog',
     data: {
       cartItems: this.cartItems,
-      total: this.grandTotal + 19
+      total: this.totalPayable
     }
   });
 }
 
+getorders() {
+  this.userId = sessionStorage.getItem('id') || '';
 
+  this.http.get<any[]>(`http://localhost:3000/orders?userId=${this.userId}`).subscribe({
+    next: (items) => {
+      this.cartItems = items;
+      this.itemTotal = items.reduce((sum, item) => sum + Number(item.price) * (item.quantity || 1), 0);
+      this.totalPayable = this.itemTotal + this.platformFee;
+      console.log('Cart items fetched successfully:', this.cartItems);
+    },
+    error: (err) => {
+      console.error('Failed to fetch cart items:', err);
+    }
+  });
 
 }
 
 
+
+
+
+
+
+
+
+}
 
 
 

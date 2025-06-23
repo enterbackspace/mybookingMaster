@@ -19,9 +19,12 @@ productAdded: boolean = false
     this.http.get('http://localhost:3000/vegitable').subscribe({
       next: (data: any) => {
         this.product = data;
+        console.log('Product data fetched successfully:', this.product);
       },
       error: (err) => {
         console.error('Error fetching product data:', err);
+        // Utility method to generate a random ID
+        
       }
     });
   }
@@ -145,7 +148,40 @@ deleteFromFav(product: any) {
   });
 }
  
+ generateRandomId(): string {
+          return Math.random().toString(36).substr(2, 9);
+        }
 
+ 
+placeSelectedOrder(product: any) {
+  const formattedOrder = {
+    "0": {
+      id: product.id,
+      userId:this.userId,
+      productId: product.productId,
+      quantity: 1,
+      productName: product.ProductName,
+      // price: product.price,
+      mrp: product.mrp,
+      discount: product.discount || 0,
+      image: product.imageUrl,
+      selected: true
+    },
+    id: this.generateRandomId() // Unique order ID
+  };
+
+  this.http.post('http://localhost:3000/orders', formattedOrder).subscribe({
+    next: () => {
+      this.toastr.success('Order placed successfully!', 'Success');
+      this.route.navigate(['/dash/Checkout']);
+    },
+    error: (err) => {
+      console.error('Order placement failed:', err);
+      this.toastr.error('Failed to place order.', 'Error');
+    }
+  });
+}
+ 
 
 }
 

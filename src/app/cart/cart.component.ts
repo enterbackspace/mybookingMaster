@@ -28,6 +28,12 @@ deliveryDate: Date = new Date(new Date().setDate(new Date().getDate() + 2));
     }
 
     this.loadCartFromServer();
+    
+// Add selected field
+this.cartItems.forEach(item => {
+  item.selected = false;
+});
+
   }
 
   loadCartFromServer() {
@@ -89,11 +95,26 @@ deliveryDate: Date = new Date(new Date().setDate(new Date().getDate() + 2));
 goToMarket(){
   this.router.navigate(['/dash/user']).catch(err => console.error('Navigation error:', err));
 }
-  
 
-checkout() {
-  this.router.navigate(['/dash/Checkout']).catch(err => console.error('Navigation error:', err));
 
+placeSelectedOrder() {
+  const selectedItems = this.cartItems.filter(item => item.selected);
+  if (selectedItems.length === 0) {
+    this.toastr.warning('Please select at least one item.', 'No Selection');
+    return;
+  }
+  this.http.post('http://localhost:3000/orders', selectedItems).subscribe({
+    next: () => {
+      this.toastr.success('Order placed successfully!', 'Success');
+      this.router.navigate(['/dash/Checkout']);
+    },
+    error: (err) => {
+      console.error('Order placement failed:', err);
+      this.toastr.error('Failed to place order.', 'Error');
+    }
+  });
 }
+
+
  
 }

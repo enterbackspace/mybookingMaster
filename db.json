@@ -1365,107 +1365,52 @@
   ],
   "Cart": [
     {
-      "id": "5cd2",
+      "id": "3411",
+      "userId": "1",
+      "productId": "V100090",
+      "quantity": 2,
+      "productName": "Tomato, 1 kg",
+      "price": "30",
+      "mrp": "40",
+      "image": "https://eaglefox.in/wp-content/uploads/2020/04/fresh-tomato-1024x1024.jpg"
+    },
+    {
+      "id": "150a",
       "userId": "1",
       "productId": "V100091",
-      "quantity": 1,
+      "quantity": 2,
       "productName": "Potato, 1 kg",
       "price": "25",
       "mrp": "35",
       "image": "assets/potato.png"
     },
     {
-      "id": "bcc1",
+      "id": "8e74",
       "userId": "1",
-      "productId": "V100090",
-      "quantity": 1,
-      "productName": "Tomato, 1 kg",
-      "price": "30",
-      "mrp": "40",
-      "image": "https://eaglefox.in/wp-content/uploads/2020/04/fresh-tomato-1024x1024.jpg"
+      "productId": "V100095",
+      "quantity": 5,
+      "productName": "Cabbage, 1 Piece",
+      "price": "40",
+      "mrp": "55",
+      "image": "assets/Cabbage.png",
+      "selected": true
     }
   ],
-  "Favorite": [
-    {
-      "id": "0c98",
-      "userId": "1",
-      "productId": "V100091",
-      "productName": "Potato, 1 kg",
-      "price": "25",
-      "mrp": "35",
-      "image": "assets/potato.png"
-    }
-  ],
+  "Favorite": [],
   "orders": [
     {
-      "id": "750a",
-      "userId": "1",
-      "productId": "V100089",
-      "quantity": 1,
-      "productName": "Curry Leaves, 1 Bunch",
-      "price": "12",
-      "mrp": "24",
-      "image": "https://th.bing.com/th/id/OIP.Um1MhltLED0GkQ6dkNyV6gHaE8?pid=ImgDet&rs=1"
-    },
-    {
-      "id": "40d9",
-      "userId": "1",
-      "productId": "V100090",
-      "quantity": 1,
-      "productName": "Tomato, 1 kg",
-      "price": "30",
-      "mrp": "40",
-      "image": "https://eaglefox.in/wp-content/uploads/2020/04/fresh-tomato-1024x1024.jpg"
-    },
-    {
-      "id": "bf17",
-      "userId": "1",
-      "productId": "V100091",
-      "quantity": 1,
-      "productName": "Potato, 1 kg",
-      "price": "25",
-      "mrp": "35",
-      "image": "assets/potato.png"
-    },
-    {
-      "id": "2ab6",
-      "userId": "1",
-      "productId": "V100092",
-      "quantity": 1,
-      "productName": "Carrot, 1 kg",
-      "price": "38",
-      "mrp": "50",
-      "image": "assets/carrot.jpg"
-    },
-    {
-      "id": "f0b4",
-      "userId": "1",
-      "quantity": 1
-    },
-    {
-      "id": "ee8d",
-      "userId": "1",
-      "quantity": 1
-    },
-    {
-      "id": "0de0",
-      "userId": "1",
-      "quantity": 1
-    },
-    {
-      "id": "e539",
-      "userId": "1",
-      "quantity": 1
-    },
-    {
-      "id": "0c0b",
-      "userId": "1",
-      "quantity": 1
-    },
-    {
-      "id": "2323",
-      "userId": "1",
-      "quantity": 1
+      "0": {
+        "id": "1",
+        "userId": "1",
+        "productId": "V100089",
+        "quantity": 1,
+        "productName": "Curry Leaves, 1 Bunch",
+        "mrp": "24",
+        "discount": "50%",
+        "image": "https://th.bing.com/th/id/OIP.Um1MhltLED0GkQ6dkNyV6gHaE8?pid=ImgDet&rs=1",
+        "selected": true
+      },
+      "id": "4u7jwvk9i"
     }
   ]
 }
