@@ -65,5 +65,8 @@ onSubmit(): void {
       this.router.navigate(['/']); // Fallback route
     }
   }
+  myOrders(){
+    this.router.navigate(['dash/my_orders']);
+  }
 
 }

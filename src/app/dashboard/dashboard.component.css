@@ -119,3 +119,20 @@
   height: 32px;
   border-radius: 50%;
 }
+
+mat-sidenav-container {
+  height: 100vh; /* Full screen height */
+}
+.sidenav-container {
+  height: 100vh;
+}
+
+.veggie-sidenav {
+  width: 250px;
+}
+
+.mat-sidenav-content {
+  padding: 16px; /* optional for content spacing */
+  display: flex;
+  flex-direction: column;
+}

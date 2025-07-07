@@ -1,117 +1,75 @@
-<mat-toolbar class="top-toolbar">
-  <button mat-icon-button (click)="sidenav.toggle()" matTooltip="Toggle Menu">
-    <mat-icon>menu</mat-icon>
-  </button>
+<mat-sidenav-container class="sidenav-container">
 
-  <div class="d-flex align-items-center brand btn btn">
-    <span class="navbar" [routerLink]="['/dash/home']">
-      <div class="logo">FreshVeggies</div>
-    </span>
-  </div>
+  <!-- Side Nav -->
+  <mat-sidenav #sidenav mode="over" class="veggie-sidenav">
+    <mat-nav-list>
 
- 
+      <div class="sidenav-header">
+        <img src="assets/icon.png" width="50" />
+        <h4 (click)="sidenav.toggle()">Dashboard</h4>
+      </div>
 
-  <span class="spacer"></span>
+      <mat-divider></mat-divider>
 
-  <!-- Buttons based on role -->
-  <button *ngIf="userRole === 'admin'" (click)="addItem()" mat-icon-button matTooltip="Add Product">
-    <mat-icon>inventory_2</mat-icon>
-  </button>
+      <!-- Menu Items -->
+      <a mat-list-item routerLink="/dash/user"><mat-icon>shopping_basket</mat-icon><span>Products</span></a>
+      <a mat-list-item [routerLink]="['/dash/myOrders']"><mat-icon>receipt_long</mat-icon><span>Orders</span></a>
+      <a mat-list-item routerLink="/analytics"><mat-icon>bar_chart</mat-icon><span>Analytics</span></a>
+      <a mat-list-item routerLink="/settings"><mat-icon>settings</mat-icon><span>Settings</span></a>
+      <a mat-list-item routerLink="/vegetables"><mat-icon>eco</mat-icon><span>Vegetables</span></a>
+      <a mat-list-item routerLink="/groceries"><mat-icon>local_grocery_store</mat-icon><span>Groceries</span></a>
+      <a mat-list-item routerLink="/stationery"><mat-icon>edit</mat-icon><span>Stationery</span></a>
+      <a mat-list-item routerLink="/cleaning"><mat-icon>cleaning_services</mat-icon><span>Cleaning Products</span></a>
 
-  <button *ngIf="userRole === 'user'" mat-icon-button matTooltip="Cart" (click)="cart()">
-    <mat-icon [matBadge]="cartCount" [matBadgeHidden]="cartCount === 0" matBadgeColor="accent">
-      shopping_cart
-    </mat-icon>
-  </button>
+    </mat-nav-list>
+  </mat-sidenav>
 
-  <button mat-icon-button matTooltip="Favorite" (click)="favorite()">
-    <mat-icon [matBadge]="Favourite" [matBadgeHidden]="Favourite === 0" matBadgeColor="accent">
-      favorite
-    </mat-icon>
-  </button>
-
-  <button mat-icon-button [matMenuTriggerFor]="profileMenu" matTooltip="Profile">
-    <img [src]="profile" class="profile-img" />
-  </button>
-
-  <mat-menu #profileMenu="matMenu" class="profile-menu">
-    <div class="profile-header">
-      <img [src]="profile" class="profile-avatar" />
-      <div class="profile-info"></div>
-    </div>
-    <mat-divider></mat-divider>
-    <button mat-menu-item (click)="viewProfile()">
-      <mat-icon>visibility</mat-icon><span>View Profile</span>
-    </button>
-    <button mat-menu-item (click)="logout()">
-      <mat-icon>logout</mat-icon><span>Logout</span>
-    </button>
-  </mat-menu>
-</mat-toolbar>
-
-<mat-sidenav #sidenav mode="side" class="veggie-sidenav">
-  <mat-nav-list>
-  <button mat-icon-button (click)="sidenav.toggle()" matTooltip="Toggle Menu">
-</button>
-    <!-- Sidenav Header -->
-    <div class="sidenav-header">
-      <img src="assets/icon.png" width="50">
- <h4 (click)="sidenav.toggle()">Dashboard</h4>
-    </div>
-
-    <mat-divider></mat-divider>
-
-    <!-- Main Menu Items -->
-    <a mat-list-item routerLink="/dash/user" matTooltip="Product List">
-      <mat-icon>shopping_basket</mat-icon>
-      <span>Products</span>
-    </a>
-
-    <a mat-list-item routerLink="/orders" matTooltip="Order List">
-      <mat-icon>receipt_long</mat-icon>
-      <span>Orders</span>
-    </a>
-
-    <a mat-list-item routerLink="/analytics" matTooltip="Analytics">
-      <mat-icon>bar_chart</mat-icon>
-      <span>Analytics</span>
-    </a>
-
-    <a mat-list-item routerLink="/settings" matTooltip="Settings">
-      <mat-icon>settings</mat-icon>
-      <span>Settings</span>
-    </a>
-
-    <!-- Additional Category Buttons -->
-    <a mat-list-item routerLink="/vegetables" matTooltip="Vegetables">
-      <mat-icon>eco</mat-icon>
-      <span>Vegetables</span>
-    </a>
-
-    <a mat-list-item routerLink="/groceries" matTooltip="Groceries">
-      <mat-icon>local_grocery_store</mat-icon>
-      <span>Groceries</span>
-    </a>
-
-    <a mat-list-item routerLink="/stationery" matTooltip="Stationery">
-      <mat-icon>edit</mat-icon>
-      <span>Stationery</span>
-    </a>
-
-    <a mat-list-item routerLink="/cleaning" matTooltip="House Cleaning Products">
-      <mat-icon>cleaning_services</mat-icon>
-      <span>Cleaning Products</span>
-    </a>
-
-  </mat-nav-list>
- </mat-sidenav>
- 
-
-<mat-sidenav-container>  <!-- Main Content Area -->
+  <!-- Main Content -->
   <mat-sidenav-content>
-  
+
+    <!-- Top Toolbar -->
+    <mat-toolbar class="top-toolbar">
+      <button mat-icon-button (click)="sidenav.toggle()" matTooltip="Toggle Menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <div class="brand btn btn">
+        <span class="navbar" [routerLink]="['/dash/home']">
+          <div class="logo">FreshVeggies</div>
+        </span>
+      </div>
+
+      <span class="spacer"></span>
+
+      <!-- Role-Based Buttons -->
+      <button *ngIf="userRole === 'admin'" (click)="addItem()" mat-icon-button matTooltip="Add Product">
+        <mat-icon>inventory_2</mat-icon>
+      </button>
+
+      <button *ngIf="userRole === 'user'" mat-icon-button matTooltip="Cart" (click)="cart()">
+        <mat-icon [matBadge]="cartCount" [matBadgeHidden]="cartCount === 0" matBadgeColor="accent">shopping_cart</mat-icon>
+      </button>
+
+      <button mat-icon-button matTooltip="Favorite" (click)="favorite()">
+        <mat-icon [matBadge]="Favourite" [matBadgeHidden]="Favourite === 0" matBadgeColor="accent">favorite</mat-icon>
+      </button>
+
+      <button mat-icon-button [matMenuTriggerFor]="profileMenu" matTooltip="Profile">
+        <img [src]="profile" class="profile-img" />
+      </button>
+
+      <mat-menu #profileMenu="matMenu" class="profile-menu">
+        <div class="profile-header">
+          <img [src]="profile" class="profile-avatar" />
+          <div class="profile-info"></div>
+        </div>
+        <mat-divider></mat-divider>
+        <button mat-menu-item (click)="viewProfile()"><mat-icon>visibility</mat-icon><span>View Profile</span></button>
+        <button mat-menu-item (click)="logout()"><mat-icon>logout</mat-icon><span>Logout</span></button>
+      </mat-menu>
+    </mat-toolbar>
+
     <router-outlet></router-outlet>
   </mat-sidenav-content>
-</mat-sidenav-container>
 
- 
+</mat-sidenav-container>

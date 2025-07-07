@@ -21,15 +21,40 @@
 
   <div class="payment-section mt-4">
     <h3>💳 Select Payment Method</h3>
+
     <mat-radio-group [(ngModel)]="paymentMethod">
       <mat-radio-button value="cash">Cash on Delivery</mat-radio-button>
       <mat-radio-button value="card">Credit/Debit Card</mat-radio-button>
       <mat-radio-button value="upi">UPI</mat-radio-button>
     </mat-radio-group>
+
+    <!-- ⚠️ COD Notice -->
+    <div *ngIf="paymentMethod === 'cash'" class="cod-notice mt-2 text-danger">
+      <strong>Note:</strong> ₹30 extra will be charged for Cash on Delivery.
+    </div>
+
+    <!-- 💳 Cardholder Name Input -->
+    <div *ngIf="paymentMethod === 'card'" class="form-group mt-3">
+      <label for="cardholderName">Cardholder Name</label>
+      <input id="cardholderName" type="text" [(ngModel)]="cardholderName" class="form-control" placeholder="Enter cardholder name" />
+    </div>
+
+    <!-- 🪙 UPI Input -->
+    <div *ngIf="paymentMethod === 'upi'" class="form-group mt-3">
+      <label for="upiId">UPI ID</label>
+      <input id="upiId" type="text" [(ngModel)]="upiId" class="form-control" placeholder="e.g. user@upi" />
+    </div>
   </div>
 </mat-dialog-content>
 
 <mat-dialog-actions align="end">
   <button mat-button (click)="cancel()">Cancel</button>
-  <button mat-raised-button color="primary" (click)="confirmOrder()">Place Order</button>
+  <button 
+    mat-raised-button 
+    color="primary" 
+    [disabled]="!paymentMethod" 
+    (click)="confirmOrder()"
+  >
+    Place Order
+  </button>
 </mat-dialog-actions>

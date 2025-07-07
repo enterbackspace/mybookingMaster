@@ -76,7 +76,7 @@
       "Ingerdiance": "Staple for curries, fries, and snacks",
       "type": "veg",
       "isactive": true,
-      "imageUrl": "assets/potato.png",
+      "imageUrl": "https://wallpaperaccess.com/full/1986273.jpg",
       "mrp": "35",
       "price": "25",
       "id": "3",
@@ -102,7 +102,7 @@
       "Ingerdiance": "Crunchy and sweet, rich in beta-carotene",
       "type": "veg",
       "isactive": true,
-      "imageUrl": "assets/carrot.jpg",
+      "imageUrl": "https://www.jessicagavin.com/wp-content/uploads/2019/02/carrots-benefits-pin.jpg",
       "mrp": "50",
       "price": "38",
       "id": "4",
@@ -128,7 +128,7 @@
       "Ingerdiance": "Leafy greens, rich in iron and vitamins",
       "type": "veg",
       "isactive": true,
-      "imageUrl": "assets/spinach.png",
+      "imageUrl": "https://cdn.britannica.com/30/82530-050-79911DD4/Spinach-leaves-vitamins-source-person.jpg",
       "mrp": "30",
       "price": "20",
       "id": "5",
@@ -154,7 +154,7 @@
       "Ingerdiance": "Essential for cooking, provides base flavor",
       "type": "veg",
       "isactive": true,
-      "imageUrl": "assets/Onion.jpg",
+      "imageUrl": "https://wallpapercave.com/wp/wp7253143.jpg",
       "mrp": "45",
       "price": "33",
       "id": "6",
@@ -180,7 +180,7 @@
       "Ingerdiance": "Crunchy leaves for coleslaw and stir-fries",
       "type": "veg",
       "isactive": true,
-      "imageUrl": "assets/Cabbage.png",
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/71nFvA-EOeL._SL1500_.jpg",
       "mrp": "55",
       "price": "40",
       "id": "7",
@@ -206,7 +206,7 @@
       "Ingerdiance": "Sweet peppers, rich in vitamin C",
       "type": "veg",
       "isactive": true,
-      "imageUrl": "assets/BellPepper.webp",
+      "imageUrl": "https://tse2.mm.bing.net/th/id/OIP.6J8q_0lqBY5Jw5T112Sk1gHaE8?rs=1&pid=ImgDetMain&o=7&rm=3",
       "mrp": "120",
       "price": "90",
       "id": "8",
@@ -232,7 +232,7 @@
       "Ingerdiance": "Cruciferous vegetable, high in fiber",
       "type": "veg",
       "isactive": true,
-      "imageUrl": "assets/Broccoli.png",
+      "imageUrl": "https://www.evolvingtable.com/wp-content/uploads/2022/08/How-to-Steam-Broccoli-16.jpg",
       "mrp": "85",
       "price": "60",
       "id": "9",
@@ -258,7 +258,7 @@
       "Ingerdiance": "White vegetable used in curries and roasting",
       "type": "veg",
       "isactive": true,
-      "imageUrl": "assets/Cauliflower.jpg",
+      "imageUrl": "https://tse3.mm.bing.net/th/id/OIP.9npCfTt0Nd0Bf1qDWgPGlAHaE8?w=700&h=467&rs=1&pid=ImgDetMain&o=7&rm=3",
       "mrp": "80",
       "price": "55",
       "id": "10",
@@ -284,7 +284,7 @@
       "Ingerdiance": "Earthy roots used in salads and juices",
       "type": "veg",
       "isactive": true,
-      "imageUrl": "assets/Beetroot.png",
+      "imageUrl": "https://th.bing.com/th/id/OIP.LsMXx7Ist2av-hFQUM3O3wHaHa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3",
       "mrp": "60",
       "price": "45",
       "id": "11",
@@ -310,7 +310,7 @@
       "Ingerdiance": "Green summer squash for grilling and sautés",
       "type": "veg",
       "isactive": true,
-      "imageUrl": "assets/Zucchini.png",
+      "imageUrl": "https://tse2.mm.bing.net/th/id/OIP.083Ix9-y9HEGsAxhnXYb9AHaEJ?rs=1&pid=ImgDetMain&o=7&rm=3",
       "mrp": "75",
       "price": "55",
       "id": "12",
@@ -336,7 +336,7 @@
       "Ingerdiance": "Purple nightshade used in curries and grilling",
       "type": "veg",
       "isactive": true,
-      "imageUrl": "assets/Eggplant.jpg",
+      "imageUrl": "https://tse1.mm.bing.net/th/id/OIP.bMPhwgP2BYVHPUiwly7FowHaEa?rs=1&pid=ImgDetMain&o=7&rm=3",
       "mrp": "90",
       "price": "65",
       "id": "13",
@@ -362,7 +362,7 @@
       "Ingerdiance": "Slippery pods used in stews and stir-fries",
       "type": "veg",
       "isactive": true,
-      "imageUrl": "assets/Okra.png",
+      "imageUrl": "https://th.bing.com/th/id/R.91f704ecfac3f092d26cfb7231e528c2?rik=YoHgu3DPTKVU4Q&riu=http%3a%2f%2fwww.onlyfoods.net%2fwp-content%2fuploads%2f2015%2f05%2fOkra-Photos.jpg&ehk=z1ryVvsh0lVpgZZU9G6GJpK66jCKaVwvsWdm%2bFYzWcM%3d&risl=&pid=ImgRaw&r=0",
       "mrp": "70",
       "price": "50",
       "id": "14",
@@ -388,7 +388,7 @@
       "Ingerdiance": "Crunchy beans for stir-fries and salads",
       "type": "veg",
       "isactive": true,
-      "imageUrl": "assets/GreenBeans.png",
+      "imageUrl": "https://th.bing.com/th/id/R.c48f9474c3135a33c6005083effd11e7?rik=IZPaE%2f6OsbRT4A&riu=http%3a%2f%2fwww.publicdomainpictures.net%2fpictures%2f80000%2fvelka%2ffresh-greenbeans.jpg&ehk=iostP5pzM1YaMJee2CjIQmQcU9aqtsrNnoLKVcLpQCM%3d&risl=&pid=ImgRaw&r=0",
       "mrp": "85",
       "price": "65",
       "id": "15",
@@ -1363,191 +1363,329 @@
       "password": "Babu@123"
     }
   ],
-  "Cart": [
+  "Cart": [],
+  "Favorite": [],
+  "Confirmed": [
     {
-      "id": "aebc",
+      "id": "npbxuxk49",
       "userId": "1",
       "productId": "V100092",
-      "quantity": 1,
+      "quantity": 5,
       "productName": "Carrot, 1 kg",
+      "selected": true,
+      "image": "assets/carrot.jpg",
       "price": 38,
-      "mrp": 50,
-      "image": "assets/carrot.jpg"
+      "Orderid": "ORD1751362689140"
     },
     {
-      "id": "d051",
+      "id": "qxmn6yfu6",
+      "userId": "1",
+      "productId": "V100089",
+      "quantity": 7,
+      "productName": "Curry Leaves, 1 Bunch",
+      "selected": true,
+      "image": "https://th.bing.com/th/id/OIP.Um1MhltLED0GkQ6dkNyV6gHaE8?pid=ImgDet&rs=1",
+      "price": 12,
+      "Orderid": "ORD1751362689140"
+    },
+    {
+      "id": "r13zxd936",
+      "userId": "1",
+      "productId": "V100090",
+      "quantity": 2,
+      "productName": "Tomato, 1 kg",
+      "selected": true,
+      "image": "https://eaglefox.in/wp-content/uploads/2020/04/fresh-tomato-1024x1024.jpg",
+      "price": 30,
+      "Orderid": "ORD1751362689140"
+    },
+    {
+      "id": "kr6tgub60",
+      "userId": "1",
+      "productId": "V100091",
+      "quantity": 3,
+      "productName": "Potato, 1 kg",
+      "selected": true,
+      "image": "assets/potato.png",
+      "price": 24.85,
+      "Orderid": "ORD1751362689140"
+    },
+    {
+      "id": "smpqgqgqx",
+      "userId": "1",
+      "productId": "V100098",
+      "quantity": 1,
+      "productName": "Cauliflower, 1 Piece",
+      "selected": true,
+      "image": "assets/Cauliflower.jpg",
+      "price": 55.2,
+      "Orderid": "ORD1751362689140"
+    },
+    {
+      "id": "npbxuxk49",
+      "userId": "1",
+      "productId": "V100092",
+      "quantity": 5,
+      "productName": "Carrot, 1 kg",
+      "selected": true,
+      "image": "assets/carrot.jpg",
+      "price": 38,
+      "Orderid": "ORD1751362896892"
+    },
+    {
+      "id": "qxmn6yfu6",
+      "userId": "1",
+      "productId": "V100089",
+      "quantity": 7,
+      "productName": "Curry Leaves, 1 Bunch",
+      "selected": true,
+      "image": "https://th.bing.com/th/id/OIP.Um1MhltLED0GkQ6dkNyV6gHaE8?pid=ImgDet&rs=1",
+      "price": 12,
+      "Orderid": "ORD1751362896892"
+    },
+    {
+      "id": "r13zxd936",
+      "userId": "1",
+      "productId": "V100090",
+      "quantity": 2,
+      "productName": "Tomato, 1 kg",
+      "selected": true,
+      "image": "https://eaglefox.in/wp-content/uploads/2020/04/fresh-tomato-1024x1024.jpg",
+      "price": 30,
+      "Orderid": "ORD1751362896892"
+    },
+    {
+      "id": "kr6tgub60",
+      "userId": "1",
+      "productId": "V100091",
+      "quantity": 3,
+      "productName": "Potato, 1 kg",
+      "selected": true,
+      "image": "assets/potato.png",
+      "price": 24.85,
+      "Orderid": "ORD1751362896892"
+    },
+    {
+      "id": "smpqgqgqx",
+      "userId": "1",
+      "productId": "V100098",
+      "quantity": 1,
+      "productName": "Cauliflower, 1 Piece",
+      "selected": true,
+      "image": "assets/Cauliflower.jpg",
+      "price": 55.2,
+      "Orderid": "ORD1751362896892"
+    },
+    {
+      "id": "npbxuxk49",
+      "userId": "1",
+      "productId": "V100092",
+      "quantity": 5,
+      "productName": "Carrot, 1 kg",
+      "selected": true,
+      "image": "assets/carrot.jpg",
+      "price": 38,
+      "Orderid": "ORD1751363230427"
+    },
+    {
+      "id": "qxmn6yfu6",
+      "userId": "1",
+      "productId": "V100089",
+      "quantity": 7,
+      "productName": "Curry Leaves, 1 Bunch",
+      "selected": true,
+      "image": "https://th.bing.com/th/id/OIP.Um1MhltLED0GkQ6dkNyV6gHaE8?pid=ImgDet&rs=1",
+      "price": 12,
+      "Orderid": "ORD1751363230427"
+    },
+    {
+      "id": "r13zxd936",
+      "userId": "1",
+      "productId": "V100090",
+      "quantity": 2,
+      "productName": "Tomato, 1 kg",
+      "selected": true,
+      "image": "https://eaglefox.in/wp-content/uploads/2020/04/fresh-tomato-1024x1024.jpg",
+      "price": 30,
+      "Orderid": "ORD1751363230427"
+    },
+    {
+      "id": "smpqgqgqx",
+      "userId": "1",
+      "productId": "V100098",
+      "quantity": 1,
+      "productName": "Cauliflower, 1 Piece",
+      "selected": true,
+      "image": "assets/Cauliflower.jpg",
+      "price": 55.2,
+      "Orderid": "ORD1751363230427"
+    },
+    {
+      "id": "kr6tgub60",
+      "userId": "1",
+      "productId": "V100091",
+      "quantity": 3,
+      "productName": "Potato, 1 kg",
+      "selected": true,
+      "image": "assets/potato.png",
+      "price": 24.85,
+      "Orderid": "ORD1751363230427"
+    },
+    {
+      "id": "dtqomjtvk",
       "userId": "1",
       "productId": "V100089",
       "quantity": 1,
       "productName": "Curry Leaves, 1 Bunch",
+      "selected": true,
+      "image": "https://th.bing.com/th/id/OIP.Um1MhltLED0GkQ6dkNyV6gHaE8?pid=ImgDet&rs=1",
       "price": 12,
-      "mrp": 24,
-      "image": "https://th.bing.com/th/id/OIP.Um1MhltLED0GkQ6dkNyV6gHaE8?pid=ImgDet&rs=1"
-    }
-  ],
-  "Favorite": [],
-  "Confirmed": [
-    {
-      "0": {
-        "id": "npbxuxk49",
-        "userId": "1",
-        "productId": "V100092",
-        "quantity": 3,
-        "productName": "Carrot, 1 kg",
-        "selected": true,
-        "image": "assets/carrot.jpg"
-      },
-      "id": "29ae",
-      "Orderid": "ORD1750676614626"
+      "Orderid": "ORD1751369464040"
     },
     {
-      "0": {
-        "id": "qxmn6yfu6",
-        "userId": "1",
-        "productId": "V100089",
-        "quantity": 6,
-        "productName": "Curry Leaves, 1 Bunch",
-        "selected": true,
-        "image": "https://th.bing.com/th/id/OIP.Um1MhltLED0GkQ6dkNyV6gHaE8?pid=ImgDet&rs=1"
-      },
-      "id": "16ac",
-      "Orderid": "ORD1750676614626"
+      "id": "z6ix7jgtp",
+      "userId": "1",
+      "productId": "V100090",
+      "quantity": 1,
+      "productName": "Tomato, 1 kg",
+      "selected": true,
+      "image": "https://eaglefox.in/wp-content/uploads/2020/04/fresh-tomato-1024x1024.jpg",
+      "price": 30,
+      "Orderid": "ORD1751369976773"
     },
     {
-      "0": {
-        "id": "r13zxd936",
-        "userId": "1",
-        "productId": "V100090",
-        "quantity": 1,
-        "productName": "Tomato, 1 kg",
-        "selected": true,
-        "image": "https://eaglefox.in/wp-content/uploads/2020/04/fresh-tomato-1024x1024.jpg"
-      },
-      "id": "ff00",
-      "Orderid": "ORD1750676614626"
+      "id": "z6ix7jgtp",
+      "userId": "1",
+      "productId": "V100090",
+      "quantity": 1,
+      "productName": "Tomato, 1 kg",
+      "selected": true,
+      "image": "https://eaglefox.in/wp-content/uploads/2020/04/fresh-tomato-1024x1024.jpg",
+      "price": 30,
+      "Orderid": "ORD1751369978814"
     },
     {
-      "0": {
-        "id": "kr6tgub60",
-        "userId": "1",
-        "productId": "V100091",
-        "quantity": 3,
-        "productName": "Potato, 1 kg",
-        "selected": true,
-        "image": "assets/potato.png"
-      },
-      "id": "b259",
-      "Orderid": "ORD1750676614626"
+      "id": "oafwi86al",
+      "userId": "1",
+      "productId": "V100089",
+      "quantity": 1,
+      "productName": "Curry Leaves, 1 Bunch",
+      "selected": true,
+      "image": "https://th.bing.com/th/id/OIP.Um1MhltLED0GkQ6dkNyV6gHaE8?pid=ImgDet&rs=1",
+      "price": 12,
+      "Orderid": "ORD1751372607124"
     },
     {
-      "0": {
-        "id": "npbxuxk49",
-        "userId": "1",
-        "productId": "V100092",
-        "quantity": 3,
-        "productName": "Carrot, 1 kg",
-        "selected": true,
-        "image": "assets/carrot.jpg"
-      },
-      "id": "a0fd",
-      "Orderid": "ORD1750676657369"
+      "id": "oafwi86al",
+      "userId": "1",
+      "productId": "V100089",
+      "quantity": 2,
+      "productName": "Curry Leaves, 1 Bunch",
+      "selected": true,
+      "image": "https://th.bing.com/th/id/OIP.Um1MhltLED0GkQ6dkNyV6gHaE8?pid=ImgDet&rs=1",
+      "price": 12,
+      "Orderid": "ORD1751372624932"
     },
     {
-      "0": {
-        "id": "qxmn6yfu6",
-        "userId": "1",
-        "productId": "V100089",
-        "quantity": 6,
-        "productName": "Curry Leaves, 1 Bunch",
-        "selected": true,
-        "image": "https://th.bing.com/th/id/OIP.Um1MhltLED0GkQ6dkNyV6gHaE8?pid=ImgDet&rs=1"
-      },
-      "id": "fcff",
-      "Orderid": "ORD1750676657369"
+      "id": "oafwi86al",
+      "userId": "1",
+      "productId": "V100089",
+      "quantity": 2,
+      "productName": "Curry Leaves, 1 Bunch",
+      "selected": true,
+      "image": "https://th.bing.com/th/id/OIP.Um1MhltLED0GkQ6dkNyV6gHaE8?pid=ImgDet&rs=1",
+      "price": 12,
+      "Orderid": "ORD1751372954835"
     },
     {
-      "0": {
-        "id": "kr6tgub60",
-        "userId": "1",
-        "productId": "V100091",
-        "quantity": 3,
-        "productName": "Potato, 1 kg",
-        "selected": true,
-        "image": "assets/potato.png"
-      },
-      "id": "d919",
-      "Orderid": "ORD1750676657369"
-    },
-    {
-      "0": {
-        "id": "r13zxd936",
-        "userId": "1",
-        "productId": "V100090",
-        "quantity": 1,
-        "productName": "Tomato, 1 kg",
-        "selected": true,
-        "image": "https://eaglefox.in/wp-content/uploads/2020/04/fresh-tomato-1024x1024.jpg"
-      },
-      "id": "db41",
-      "Orderid": "ORD1750676657369"
+      "id": "2j1flel0v",
+      "userId": "1",
+      "productId": "V100090",
+      "quantity": 1,
+      "productName": "Tomato, 1 kg",
+      "selected": true,
+      "image": "https://eaglefox.in/wp-content/uploads/2020/04/fresh-tomato-1024x1024.jpg",
+      "price": 30,
+      "Orderid": "ORD1751372954835"
     }
   ],
   "orders": [
     {
       "0": {
-        "id": "4",
-        "userId": "1",
-        "productId": "V100092",
-        "quantity": 3,
-        "productName": "Carrot, 1 kg",
-        "mrp": 50,
-        "discount": 24,
-        "image": "assets/carrot.jpg",
-        "selected": true
-      },
-      "id": "npbxuxk49"
-    },
-    {
-      "0": {
-        "id": "1",
-        "userId": "1",
-        "productId": "V100089",
-        "quantity": 6,
-        "productName": "Curry Leaves, 1 Bunch",
-        "mrp": 24,
-        "discount": 50,
-        "image": "https://th.bing.com/th/id/OIP.Um1MhltLED0GkQ6dkNyV6gHaE8?pid=ImgDet&rs=1",
-        "selected": true
-      },
-      "id": "qxmn6yfu6"
-    },
-    {
-      "0": {
         "id": "2",
         "userId": "1",
         "productId": "V100090",
-        "quantity": 1,
+        "quantity": 2,
         "productName": "Tomato, 1 kg",
-        "mrp": 40,
-        "discount": 25,
+        "mrp": "40",
+        "discount": "25",
         "image": "https://eaglefox.in/wp-content/uploads/2020/04/fresh-tomato-1024x1024.jpg",
         "selected": true
       },
-      "id": "r13zxd936"
+      "id": "dp49ceicf"
     },
     {
       "0": {
-        "id": "926un4ruf",
+        "id": "qqiyvxt2f",
         "userId": "1",
-        "productId": "V100091",
-        "quantity": 3,
-        "productName": "Potato, 1 kg",
-        "mrp": 35,
-        "discount": 29,
-        "image": "assets/potato.png",
+        "productId": "V100089",
+        "quantity": 2,
+        "productName": "Curry Leaves, 1 Bunch",
+        "price": "12",
+        "mrp": "24",
         "selected": true
       },
-      "id": "kr6tgub60"
+      "id": "yqu37ozrt"
+    },
+    {
+      "0": {
+        "id": "3",
+        "userId": "1",
+        "productId": "V100091",
+        "quantity": 1,
+        "productName": "Potato, 1 kg",
+        "mrp": "35",
+        "discount": "29",
+        "image": "https://wallpaperaccess.com/full/1986273.jpg",
+        "selected": true
+      },
+      "id": "6hq4bnpmp"
+    }
+  ],
+  "myOrder": [
+    {
+      "id": "dtqomjtvk",
+      "userId": "1",
+      "productId": "V100089",
+      "productName": "Curry Leaves, 1 Bunch",
+      "quantity": 3,
+      "selected": true,
+      "image": "https://th.bing.com/th/id/OIP.Um1MhltLED0GkQ6dkNyV6gHaE8?pid=ImgDet&rs=1",
+      "price": 12,
+      "orderId": "ORD1751369464040",
+      "orderDate": "1 Jul 2025, 05:01 pm",
+      "deliveryDate": "2 Jul 2025",
+      "deliveryTime": "Before 11:00 AM",
+      "paymentMethod": "cash",
+      "totalPrice": 36,
+      "customerEmail": "jb2467382@gmail.com"
+    },
+    {
+      "id": "z6ix7jgtp",
+      "userId": "1",
+      "productId": "V100090",
+      "productName": "Tomato, 1 kg",
+      "quantity": 2,
+      "selected": true,
+      "image": "https://eaglefox.in/wp-content/uploads/2020/04/fresh-tomato-1024x1024.jpg",
+      "price": 30,
+      "orderId": "ORD1751369976773",
+      "orderDate": "1 Jul 2025, 05:09 pm",
+      "deliveryDate": "2 Jul 2025",
+      "deliveryTime": "Before 11:00 AM",
+      "paymentMethod": "upi",
+      "totalPrice": 60,
+      "customerEmail": "jb2467382@gmail.com"
     }
   ]
 }

@@ -50,6 +50,7 @@ import { OrderComponent } from './order/order.component';
  // import { OrderComponent } from './orders/orders.component'; // Removed to avoid duplicate identifier error
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MAT_SELECT_CONFIG } from '@angular/material/select';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,7 +74,8 @@ import { MAT_SELECT_CONFIG } from '@angular/material/select';
   OrganicProductComponent,
   UserProductDetailsComponent,
   OrderComponent,
-  CheckoutComponent
+  CheckoutComponent,
+  MyOrdersComponent
 ],
   imports: [
     BrowserModule,

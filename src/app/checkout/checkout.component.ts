@@ -36,6 +36,8 @@ export class CheckoutComponent {
   cartItemss: any[] = []; // used in calculation
 
   ngOnInit() {
+    // window.location.reload();
+
     this.userName = sessionStorage.getItem('username') || '';
     this.phone = sessionStorage.getItem('mobile') || '';
     this.email = sessionStorage.getItem('email') || '';

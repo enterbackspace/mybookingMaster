@@ -95,12 +95,14 @@ goToMarket(){
         return Math.random().toString(36).substr(2, 9);
       }
  
+
 placeSelectedOrder() {
   const selectedItems = this.cartItems.filter(item => item.selected);
   if (selectedItems.length === 0) {
     this.toastr.warning('Please select at least one item.', 'No Selection');
     return;
   }
+
   this.http.get<any[]>('http://localhost:3000/orders').subscribe({
     next: (existingOrders) => {
       selectedItems.forEach(item => {
@@ -108,8 +110,20 @@ placeSelectedOrder() {
           order["0"]?.productId === item.productId &&
           order["0"]?.userId === this.userId
         );
+
+        const removeFromCart = () => {
+          this.http.delete(`http://localhost:3000/Cart/${item.id}`).subscribe({
+            next: () => {
+              console.log(`Removed ${item.productName} from cart.`);
+              window.dispatchEvent(new Event('cartChanged'));
+            },
+            error: (err) => {
+              console.error('Failed to remove item from cart:', err);
+            }
+          });
+        };
+
         if (existingOrder) {
-          // Update quantity
           const updatedOrder = {
             ...existingOrder,
             "0": {
@@ -120,6 +134,7 @@ placeSelectedOrder() {
           this.http.put(`http://localhost:3000/orders/${existingOrder.id}`, updatedOrder).subscribe({
             next: () => {
               this.toastr.success(`Quantity updated for ${item.productName}`, 'Updated');
+              removeFromCart();
               this.router.navigate(['/dash/Checkout']);
             },
             error: (err) => {
@@ -128,7 +143,6 @@ placeSelectedOrder() {
             }
           });
         } else {
-          // New order
           const newOrder = {
             "0": {
               id: this.generateRandomId(),
@@ -141,12 +155,13 @@ placeSelectedOrder() {
               image: item.imageUrl,
               selected: true
             },
-            id: this.generateRandomId() // Top-level ID for the order
+            id: this.generateRandomId()
           };
 
           this.http.post('http://localhost:3000/orders', newOrder).subscribe({
             next: () => {
               this.toastr.success(`Order placed for ${item.productName}`, 'Success');
+              removeFromCart();
               this.router.navigate(['/dash/Checkout']);
             },
             error: (err) => {

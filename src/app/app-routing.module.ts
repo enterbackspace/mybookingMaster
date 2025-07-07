@@ -19,6 +19,7 @@ import { FavoriteComponent } from './favorite/favorite.component';
 import { OrganicProductComponent } from './organic-product/organic-product.component';
 import { UserProductDetailsComponent } from './user-product-details/user-product-details.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
 
 const routes: Routes = [
  {
@@ -77,7 +78,10 @@ const routes: Routes = [
     {
       path:'Checkout',
       component:CheckoutComponent
-    } 
+    },{
+    path:'myOrders',
+    component:MyOrdersComponent
+    }
   ]
 }];
 
